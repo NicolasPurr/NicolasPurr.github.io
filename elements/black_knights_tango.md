@@ -1,0 +1,15 @@
+---
+layout: default
+title: "Black Knights Tango"
+---
+
+# Black Knights Tango
+
+![Black Knights Tango](https://www.thechesswebsite.com/wp-content/uploads/2014/06/black-knights-tango-big.jpg)
+
+The Black Knights' Tango (also known as the Mexican Defense, Two Knights' Tango or Kevitz–Trajkovic Defense) is a chess opening beginning with the moves:
+
+1. d4 Nf6
+2.
+
+Source: [https://en.wikipedia.org/wiki/Black_Knights%27_Tango](https://en.wikipedia.org/wiki/Black_Knights%27_Tango)

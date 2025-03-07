@@ -1,0 +1,15 @@
+---
+layout: default
+title: "Grob Attack"
+---
+
+# Grob Attack
+
+![Grob Attack](https://www.thechesswebsite.com/wp-content/uploads/2018/10/grob-attack.png)
+
+Grob's Attack, or the Grob Opening, is an unconventional chess opening in which White begins with the move:
+
+1. g4
+It is widely considered to be one of the worst possible first moves for White.
+
+Source: [https://en.wikipedia.org/wiki/Grob%27s_Attack](https://en.wikipedia.org/wiki/Grob%27s_Attack)
