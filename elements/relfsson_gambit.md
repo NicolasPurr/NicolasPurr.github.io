@@ -7,9 +7,12 @@ title: "Relfsson Gambit"
 
 ![Relfsson Gambit](https://www.thechesswebsite.com/wp-content/uploads/2015/08/the-relfsson-gambit.jpg)
 
-The Scotch Game, or Scotch Opening, is a chess opening that begins with the moves:
+Here is another of my pet openings you've probably never heard of but I have used it consistently against titled players with good results.
 
-1. e4 e5
-2.
 
-Source: [https://en.wikipedia.org/wiki/Scotch_Game](https://en.wikipedia.org/wiki/Scotch_Game)
+
+
+
+
+
+Source: [https://www.chess.com/article/view/discover-the-relfsson-gambit](https://www.chess.com/article/view/discover-the-relfsson-gambit)
