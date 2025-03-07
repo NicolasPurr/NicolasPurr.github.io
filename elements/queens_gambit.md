@@ -10,6 +10,7 @@ title: "Queens Gambit"
 The Queen's Gambit is the chess opening that starts with the moves:
 
 1. d4 d5
-2.
+2. c4
+It is one of the oldest openings and is still commonly played today. It is traditionally described as a gambit because White appears to sacrifice the c-pawn; however, this could be considered a misnomer as Black cannot retain the pawn without incurring a disadvantage.
 
 Source: [https://en.wikipedia.org/wiki/Queen%27s_Gambit](https://en.wikipedia.org/wiki/Queen%27s_Gambit)

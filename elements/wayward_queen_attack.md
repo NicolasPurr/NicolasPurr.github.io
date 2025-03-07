@@ -10,6 +10,7 @@ title: "Wayward Queen Attack"
 The Danvers Opening is an unorthodox chess opening characterized by the moves:
 
 1. e4 e5
-2.
+2. Qh5
+It is also known as the Kentucky Opening,  Queen's Attack, Queen's Excursion, Wayward Queen Attack, Patzer Opening, and Parham Attack.
 
 Source: [https://en.wikipedia.org/wiki/Danvers_Opening](https://en.wikipedia.org/wiki/Danvers_Opening)

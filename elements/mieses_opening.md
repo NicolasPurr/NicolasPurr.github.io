@@ -10,6 +10,6 @@ title: "Mieses Opening"
 The Mieses Opening is a chess opening that begins with the move:
 
 1. d3
-The opening is named after the German-British grandmaster Jacques Mieses.
+The opening is named after the German-British grandmaster Jacques Mieses. It is considered an irregular opening, so it is classified under the A00 code in the Encyclopaedia of Chess Openings.
 
 Source: [https://en.wikipedia.org/wiki/Mieses_Opening](https://en.wikipedia.org/wiki/Mieses_Opening)
