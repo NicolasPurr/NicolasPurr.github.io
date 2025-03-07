@@ -7,14 +7,16 @@ title: "Ruby"
 
 ![Ruby](https://www.tiobe.com/wp-content/themes/tiobe/tiobe-index/images/Ruby.png)
 
-A dynamic, open source programming language with a focus on
-    simplicity and productivity. It has an elegant syntax that is
-    natural to read and easy to write.
+Rugby football is the collective name for the team sports of rugby union or rugby league.
 
-We published security advisories for CVE-2025-27219, CVE-2025-27220 and CVE-2025-27221. Please read the details below.
+Rugby football started at Rugby School in Rugby, Warwickshire, England, where the rules were first codified in 1845. Forms of football in which the ball was carried and tossed date to the Middle Ages (see medieval football). Rugby football spread to other English public schools in the 19th century and across the British Empire as former pupils continued to play it.
 
-Continue Reading...
+Rugby football split into two codes in 1895, when twenty-one clubs from the North of England left the Rugby Football Union to form the Northern Rugby Football Union (renamed the Rugby Football League in 1922) at the George Hotel, Huddersfield, over payments to players who took time off work to play ("broken-time payments"), thus making rugby league the first code to turn professional and pay players. Rugby union turned professional one hundred years later, following the 1995 Rugby World Cup in South Africa. The respective world governing bodies are World Rugby (rugby union) and the International Rugby League (rugby league).
+
+Canadian football and, to a lesser extent, American football were once considered forms of rugby football, but are seldom now referred to as such. The governing body of Canadian football, Football Canada, was known as the Canadian Rugby Union as late as 1967, more than fifty years after the sport parted ways with rugby rules.
 
 
 
-Source: [https://www.ruby-lang.org/en/](https://www.ruby-lang.org/en/)
+
+
+Source: [https://en.wikipedia.org/wiki/Rugby_football](https://en.wikipedia.org/wiki/Rugby_football)

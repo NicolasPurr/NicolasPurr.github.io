@@ -7,9 +7,16 @@ title: "C#"
 
 ![C#](https://www.tiobe.com/wp-content/themes/tiobe/tiobe-index/images/C_.png)
 
-A, or a, is the first letter and the first vowel letter of the Latin alphabet, used in the modern English alphabet, and others worldwide. Its name in English is a (pronounced   AY), plural aes.
-It is similar in shape to the Ancient Greek letter alpha, from which it derives. The uppercase version consists of the two slanting sides of a triangle, crossed in the middle by a horizontal bar. The lowercase version is often written in one of two forms: the double-storey |a| and single-storey |ɑ|. The latter is commonly used in handwriting and fonts based on it, especially fonts intended to be read by children, and is also found in italic type.
-In English, a is the indefinite article, with the
-alternative form an.
+C (pronounced  – like the letter c) is a general-purpose programming language. It was created in the 1970s by Dennis Ritchie and remains very widely used and influential. By design, C's features cleanly reflect the capabilities of the targeted CPUs. It has found lasting use in operating systems code (especially in kernels), device drivers, and protocol stacks, but its use in application software has been decreasing. C is commonly used on computer architectures that range from the largest supercomputers to the smallest microcontrollers and embedded systems.
 
-Source: [https://en.wikipedia.org/wiki/A](https://en.wikipedia.org/wiki/A)
+A successor to the programming language B, C was originally developed at Bell Labs by Ritchie between 1972 and 1973 to construct utilities running on Unix. It was applied to re-implementing the kernel of the Unix operating system. During the 1980s, C gradually gained popularity. It has become one of the most widely used programming languages, with C compilers available for practically all modern computer architectures and operating systems. The book The C Programming Language, co-authored by the original language designer, served for many years as the de facto standard for the language. C has been standardized since 1989 by the American National Standards Institute (ANSI) and, subsequently, jointly by the International Organization for Standardization (ISO) and the International Electrotechnical Commission (IEC).
+
+C is an imperative procedural language, supporting structured programming, lexical variable scope, and recursion, with a static type system. It was designed to be compiled to provide low-level access to memory and language constructs that map efficiently to machine instructions, all with minimal runtime support. Despite its low-level capabilities, the language was designed to encourage cross-platform programming. A standards-compliant C program written with portability in mind can be compiled for a wide variety of computer platforms and operating systems with few changes to its source code.
+
+Since 2000, C has consistently ranked among the top four languages in the TIOBE index, a measure of the popularity of programming languages.
+
+
+
+
+
+Source: [https://en.wikipedia.org/wiki/C_(programming_language)](https://en.wikipedia.org/wiki/C_(programming_language))
