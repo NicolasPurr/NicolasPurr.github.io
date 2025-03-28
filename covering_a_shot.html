@@ -1,9 +1,8 @@
-  GNU nano 7.2                                                       signals_reporting.html                                                          I        <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 text-gray-800">
   <header class="bg-gray-50 text-gray-800 py-4 shadow-lg">
     <div class="container mx-auto px-4">
-      <h1 class="text-3xl font-bold">2.8 SIGNALS & REPORTING</h1>
+      <h1 class="text-3xl font-bold">2.11 COVERING A SHOT</h1>
       <p class="text-lg">Detailed Guide</p>
     </div>
   </header>
@@ -21,16 +20,57 @@
       </ul>
     </article>
 
-	<!-- Example of a pulsating image -->
-    <section class="bg-white p-4 rounded shadow-md">
-      <h2 class="text-xl font-semibold mb-2">Example Image with Pulsating Animation</h2>
-      <div class="relative inline-block">
-        <!-- Update the src path below to point to your image in the assets folder -->
-        <img src="assets/shot.jpg" alt="Example Image" class="relative z-10 w-48 h-auto rounded">
-        <div class="absolute inset-0 rounded-full bg-purple-400 opacity-75 animate-ping"></div>
-      </div>
-      <p class="mt-2 text-sm text-gray-600">This image has a pulsating animation using Tailwind's <code>animate-ping</code> class.</p>
-    </section>
+	<!-- Example of a pulsating image with three animated dots -->
+<section class="bg-white p-4 rounded shadow-md">
+  <h2 class="text-xl font-semibold mb-2">Example Image with Pulsating Dots</h2>
+  <div class="relative inline-block">
+    <!-- Larger image -->
+    <img src="assets/shot.jpg" alt="Example Image" class="relative z-10 w-96 h-auto rounded">
+    <!-- Center dot -->
+    <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <div class="w-4 h-4 bg-purple-400 rounded-full opacity-75 animate-ping"></div>
+    </div>
+    <!-- Top dot -->
+    <div class="absolute left-1/2 top-4 transform -translate-x-1/2">
+      <div class="w-4 h-4 bg-purple-400 rounded-full opacity-75 animate-ping"></div>
+    </div>
+    <!-- Bottom dot -->
+    <div class="absolute left-1/2 bottom-4 transform -translate-x-1/2">
+      <div class="w-4 h-4 bg-purple-400 rounded-full opacity-75 animate-ping"></div>
+    </div>
+  </div>
+  <p class="mt-2 text-sm text-gray-600">
+    This image has a pulsating animation with three animated dots using Tailwind's <code>animate-ping</code> class.
+  </p>
+</section>
+
+<div class="text-center">
+  <a href="index.html" class="text-blue-500 underline">&larr; Back to Overview</a>
+</div>
+
+1~<!-- Example of a pulsating image with three animated dots -->
+<section class="bg-white p-4 rounded shadow-md">
+  <h2 class="text-xl font-semibold mb-2">Example Image with Pulsating Dots</h2>
+  <div class="relative inline-block">
+    <!-- Larger image -->
+    <img src="assets/shot.jpg" alt="Example Image" class="relative z-10 w-96 h-auto rounded">
+    <!-- Center dot -->
+    <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <div class="w-4 h-4 bg-purple-400 rounded-full opacity-75 animate-ping"></div>
+    </div>
+    <!-- Top dot -->
+    <div class="absolute left-1/2 top-4 transform -translate-x-1/2">
+      <div class="w-4 h-4 bg-purple-400 rounded-full opacity-75 animate-ping"></div>
+    </div>
+    <!-- Bottom dot -->
+    <div class="absolute left-1/2 bottom-4 transform -translate-x-1/2">
+      <div class="w-4 h-4 bg-purple-400 rounded-full opacity-75 animate-ping"></div>
+    </div>
+  </div>
+  <p class="mt-2 text-sm text-gray-600">
+    This image has a pulsating animation with three animated dots using Tailwind's <code>animate-ping</code> class.
+  </p>
+</section>
 
     <div class="text-center">
       <a href="index.html" class="text-blue-500 underline">&larr; Back to Overview</a>
