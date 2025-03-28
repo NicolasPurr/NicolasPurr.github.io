@@ -7,24 +7,73 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     @keyframes bounce {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-20px);
-      }
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
     }
-    .bouncing-ball {
+    
+    .basketball {
+      width: 50px;
+      height: 50px;
+      background-color: #f57c00; /* Basketball orange */
+      border-radius: 50%;
+      position: relative;
+      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
       animation: bounce 0.6s infinite ease-in-out;
     }
+
+    /* Vertical and Horizontal Lines */
+    .basketball::before,
+    .basketball::after {
+      content: "";
+      position: absolute;
+      background-color: black;
+      border-radius: 9999px;
+    }
+
+    .basketball::before { /* Vertical line */
+      width: 4px;
+      height: 100%;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+    }
+
+    .basketball::after { /* Horizontal line */
+      height: 4px;
+      width: 100%;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+
+    /* Curved lines (left & right) */
+    .curve-left, .curve-right {
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      top: 0;
+      border: 3px solid black;
+      border-radius: 50%;
+      border-left: none;
+      border-right: none;
+    }
+
+    .curve-left { left: 0; transform: rotate(15deg); }
+    .curve-right { right: 0; transform: rotate(-15deg); }
+
   </style>
 </head>
 <body class="bg-gray-200 text-gray-800">
   <header class="bg-gray-800 text-white py-4 shadow-lg relative">
     <div class="container mx-auto px-4 flex items-center">
+      <!-- Basketball -->
       <div class="relative">
-        <div class="w-10 h-10 bg-amber-500 rounded-full bouncing-ball shadow-lg"></div>
+        <div class="basketball">
+          <div class="curve-left"></div>
+          <div class="curve-right"></div>
+        </div>
       </div>
+      <!-- Title -->
       <div class="ml-4">
         <h1 class="text-3xl font-bold text-amber-500">FIBA Referees Manual</h1>
         <p class="text-lg">Chapter 2: Individual Officiating Techniques</p>
@@ -109,7 +158,7 @@
     <!-- Chapter 2.10: Signals & Reporting -->
     <section class="bg-gray-600 p-4 rounded shadow-md">
       <h2 class="text-2xl font-semibold mb-2 text-white"> <a href="passive_jump_ball.html" class="text-white underline"> 2.10 JUMP BALL / PASSIVE REFEREE(S)</a></h2>
-      <p>
+      <p class="text-white">
         The most complicated moment in the match.
       </p>
     </section>
