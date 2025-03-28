@@ -24,8 +24,7 @@
       justify-content: center;
     }
 
-    .basketball::before,
-    .basketball::after {
+    .basketball::before, .basketball::after {
       content: "";
       position: absolute;
       background-color: black;
@@ -65,18 +64,8 @@
 </head>
 <body class="bg-gray-200 text-gray-800">
 
-  <header class="bg-gray-800 text-white py-4 shadow-lg relative">
+  <header class="bg-gray-800 text-white py-4 shadow-lg">
     <div class="container mx-auto px-4 flex items-center justify-between">
-      
-      <!-- Go Back Button -->
-      <a href="index.html" class="flex items-center text-white hover:text-amber-500">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-        </svg>
-        <span class="text-lg font-medium">Back</span>
-      </a>
-
-      <!-- Basketball Logo -->
       <div class="relative">
         <div class="basketball">
           <div class="curve-left"></div>
@@ -84,7 +73,11 @@
         </div>
       </div>
 
-      <!-- Language Switcher -->
+      <div>
+        <h1 id="title" class="text-3xl font-bold text-amber-500">FIBA Referees Manual</h1>
+        <p id="subtitle" class="text-lg">Chapter 2: Individual Officiating Techniques</p>
+      </div>
+
       <div class="flex space-x-4">
         <button onclick="switchLanguage('en')" class="text-white hover:text-amber-500">🇬🇧 EN</button>
         <button onclick="switchLanguage('pl')" class="text-white hover:text-amber-500">🇵🇱 PL</button>
@@ -93,29 +86,7 @@
   </header>
 
   <main class="container mx-auto px-4 py-6 space-y-8">
-    <h1 id="title" class="text-3xl font-bold text-amber-500 text-center">FIBA Referees Manual</h1>
-    
-    <section class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <div class="bg-amber-500 p-4 rounded shadow-md">
-        <h2 class="text-2xl font-semibold mb-2 text-white"><a href="introduction.html" class="text-white underline">2.1 INTRODUCTION</a></h2>
-        <p id="chapter1">Learn the basics of officiating techniques.</p>
-      </div>
-
-      <div class="bg-gray-600 p-4 rounded shadow-md">
-        <h2 class="text-2xl font-semibold mb-2 text-white"><a href="distance_stationary.html" class="text-white underline">2.2 DISTANCE & STATIONARY</a></h2>
-        <p class="text-white" id="chapter2">Maintaining the right positioning and staying still while making decisions.</p>
-      </div>
-
-      <div class="bg-amber-500 p-4 rounded shadow-md">
-        <h2 class="text-2xl font-semibold mb-2 text-white"><a href="refereeing_defence.html" class="text-white underline">2.3 REFEREEING THE DEFENCE</a></h2>
-        <p id="chapter3">Focus on the defender's movements to spot fouls.</p>
-      </div>
-
-      <div class="bg-gray-600 p-4 rounded shadow-md">
-        <h2 class="text-2xl font-semibold mb-2 text-white"><a href="stay_with_the_play.html" class="text-white underline">2.4 STAY WITH THE PLAY</a></h2>
-        <p class="text-white" id="chapter4">Stay engaged in the play until it ends.</p>
-      </div>
-    </section>
+    <section id="chapters" class="grid grid-cols-1 md:grid-cols-2 gap-4"></section>
   </main>
 
   <footer class="bg-gray-800 text-gray-300 py-4">
@@ -128,27 +99,53 @@
     const translations = {
       en: {
         title: "FIBA Referees Manual",
-        chapter1: "Learn the basics of officiating techniques.",
-        chapter2: "Maintaining the right positioning and staying still while making decisions.",
-        chapter3: "Focus on the defender's movements to spot fouls.",
-        chapter4: "Stay engaged in the play until it ends."
+        subtitle: "Chapter 2: Individual Officiating Techniques",
+        chapters: [
+          { title: "2.1 INTRODUCTION", desc: "Learn the basics of officiating techniques.", link: "introduction.html" },
+          { title: "2.2 DISTANCE & STATIONARY", desc: "Maintain proper positioning for better decisions.", link: "distance_stationary.html" },
+          { title: "2.3 REFEREEING THE DEFENCE", desc: "Focus on defenders to spot fouls.", link: "refereeing_defence.html" },
+          { title: "2.4 STAY WITH THE PLAY", desc: "Remain engaged until the action ends.", link: "stay_with_the_play.html" },
+          { title: "2.5 POSITIONING, OPEN ANGLE & ADJUSTMENTS", desc: "Use correct positioning to see more players.", link: "positioning.html" },
+          { title: "2.6 PRE-GAME CONFERENCE", desc: "Key topics referees should discuss pre-game.", link: "pre_game.html" },
+          { title: "2.7 MAKING A CALL, DECISION MAKING & COMMUNICATION", desc: "Techniques for signaling and whistle use.", link: "making_call.html" },
+          { title: "2.8 SIGNALS & REPORTING", desc: "Proper use of signals for consistency.", link: "signals_reporting.html" },
+          { title: "2.9 JUMP BALL / ACTIVE REFEREE", desc: "How to administer the jump ball as Crew Chief.", link: "active_jump_ball.html" },
+          { title: "2.10 JUMP BALL / PASSIVE REFEREE(S)", desc: "Handling the most complex moment in a match.", link: "passive_jump_ball.html" },
+          { title: "2.11 COVERING A SHOT (PROTECT THE SHOOTER)", desc: "Ensuring full coverage during a shot attempt.", link: "covering_a_shot.html" },
+        ]
       },
       pl: {
         title: "Podręcznik Sędziów FIBA",
-        chapter1: "Poznaj podstawy technik sędziowania.",
-        chapter2: "Zachowanie odpowiedniego dystansu i nieruchomość podczas podejmowania decyzji.",
-        chapter3: "Skupienie na ruchach obrońcy w celu wykrycia fauli.",
-        chapter4: "Pozostanie zaangażowanym w grę do samego końca."
+        subtitle: "Rozdział 2: Indywidualne Techniki Sędziowania",
+        chapters: [
+          { title: "2.1 WPROWADZENIE", desc: "Poznaj podstawy technik sędziowania.", link: "introduction.html" },
+          { title: "2.2 DYSTANS I STABILNOŚĆ", desc: "Utrzymanie odpowiedniej pozycji.", link: "distance_stationary.html" },
+          { title: "2.3 SĘDZIOWANIE OBRONY", desc: "Skupienie na obrońcach w celu wykrycia fauli.", link: "refereeing_defence.html" },
+          { title: "2.4 POZOSTAŃ Z AKCJĄ", desc: "Bądź zaangażowany do końca akcji.", link: "stay_with_the_play.html" },
+          { title: "2.5 POZYCJONOWANIE I KĄT WIDZENIA", desc: "Lepsza widoczność dzięki prawidłowej pozycji.", link: "positioning.html" },
+          { title: "2.6 KONFERENCJA PRZEDMECZOWA", desc: "Co omówić przed meczem.", link: "pre_game.html" },
+          { title: "2.7 DECYZJE I KOMUNIKACJA", desc: "Techniki gwizdania i sygnalizacji.", link: "making_call.html" },
+          { title: "2.8 SYGNAŁY I RAPORTOWANIE", desc: "Poprawne użycie sygnałów.", link: "signals_reporting.html" },
+          { title: "2.9 RZUT SĘDZIOWSKI / SĘDZIA AKTYWNY", desc: "Jak prowadzić rzut sędziowski.", link: "active_jump_ball.html" },
+          { title: "2.10 RZUT SĘDZIOWSKI / SĘDZIOWIE PASYWNI", desc: "Najtrudniejszy moment meczu.", link: "passive_jump_ball.html" },
+          { title: "2.11 OSŁONA RZUTU", desc: "Pełne pokrycie sytuacji rzutowej.", link: "covering_a_shot.html" },
+        ]
       }
     };
 
     function switchLanguage(lang) {
       document.getElementById("title").innerText = translations[lang].title;
-      document.getElementById("chapter1").innerText = translations[lang].chapter1;
-      document.getElementById("chapter2").innerText = translations[lang].chapter2;
-      document.getElementById("chapter3").innerText = translations[lang].chapter3;
-      document.getElementById("chapter4").innerText = translations[lang].chapter4;
+      document.getElementById("subtitle").innerText = translations[lang].subtitle;
+      const chapterContainer = document.getElementById("chapters");
+      chapterContainer.innerHTML = translations[lang].chapters.map((ch, i) => `
+        <section class="${i % 2 === 0 ? 'bg-amber-500' : 'bg-gray-600'} p-4 rounded shadow-md">
+          <h2 class="text-2xl font-semibold mb-2 text-white"><a href="${ch.link}" class="text-white underline">${ch.title}</a></h2>
+          <p class="${i % 2 !== 0 ? 'text-white' : ''}">${ch.desc}</p>
+        </section>
+      `).join("");
     }
+
+    switchLanguage('en');
   </script>
 
 </body>
