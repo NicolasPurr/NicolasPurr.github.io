@@ -5,43 +5,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>2.1 INTRODUCTION - FIBA Referees Manual</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function switchLanguage(lang) {
+      document.querySelectorAll("[data-en]").forEach(el => {
+        el.style.display = lang === 'en' ? 'block' : 'none';
+      });
+      document.querySelectorAll("[data-pl]").forEach(el => {
+        el.style.display = lang === 'pl' ? 'block' : 'none';
+      });
+    }
+  </script>
 </head>
 <body class="bg-gray-100 text-gray-800">
   <header class="bg-gray-600 text-gray-800 py-4 shadow-lg">
-    <div class="container mx-auto px-4">
-      <h1 class="text-3xl font-bold text-white">2.1 INTRODUCTION</h1>
-      <p class="text-lg text-amber-500">FIBA Referees Manual - Detailed Chapter</p>
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <div>
+        <h1 class="text-3xl font-bold text-white">2.1 INTRODUCTION</h1>
+        <p class="text-lg text-amber-500">FIBA Referees Manual - Detailed Chapter</p>
+      </div>
+      <div>
+        <button onclick="switchLanguage('en')" class="bg-amber-500 text-white px-4 py-2 rounded mr-2">EN</button>
+        <button onclick="switchLanguage('pl')" class="bg-amber-500 text-white px-4 py-2 rounded">PL</button>
+      </div>
     </div>
   </header>
 
   <main class="container mx-auto px-4 py-6 space-y-6">
     <article class="bg-amber-500 p-4 rounded shadow-md">
-      <p class="text-white">
-        Individual Officiating Techniques (IOT) is the most important foundation for either 2 Person Officiating (2PO) or 3 Person Officiating (3PO). Over the past 15 years, there has been a heavy focus on 3PO (namely for the mechanical movements of the referees on the floor), which has led to a lack of knowledge in how to referee individual play phases.
+      <p class="text-white" data-en>
+        Individual Officiating Techniques (IOT) is the most important foundation for either 2 Person Officiating (2PO) or 3 Person Officiating (3PO). In the past 15 years, there has been a heavy focus on 3PO (namely for the mechanical movements of referees on the floor). This has led to a lack of knowledge in how to referee individual play phases, which are fundamental skills needed to process and facilitate correct decisions.
       </p>
-      <p class="mt-4 text-white">
-        These inherent skills of IOT are equally relevant for both 2PO and 3PO. In analysing play phases and calling the game, some basic principles are necessary:
+      <p class="text-white" data-pl style="display: none;">
+        Indywidualne Techniki Sędziowania (IOT) to najważniejsza podstawa zarówno dla sędziowania w systemie 2-osobowym (2PO), jak i 3-osobowym (3PO). W ciągu ostatnich 15 lat duży nacisk położono na 3PO (głównie na ruchy mechaniczne sędziów na boisku). Doprowadziło to do braku wiedzy o tym, jak faktycznie sędziować poszczególne fazy gry, co jest podstawową umiejętnością potrzebną do podejmowania właściwych decyzji.
       </p>
-      <ul class="list-disc pl-6 mt-2 text-white">
-        <li>
-          <a href="distance_stationary.html" class="text-white underline"><strong>Distance & Stationary:</strong></a> Have proper distance from the play and be stationary when contact occurs.
-        </li>
-        <li>
-          <a href="refereeing_defence.html" class="text-white underline"><strong>Referee the Defence</strong></a>: Focus on illegal actions by the defensive player.
-        </li>
-        <li>
-          <strong>Active Mind-set:</strong> Be ready for anything that might happen, actively seek potential threats.
-        </li>
-        <li>
-          <a href="positioning.html" class="text-white underline"><strong>45° & Open Angle</strong></a> Try to have as many players in your field of vision as possible.
-        </li>
-        <li>
-          <strong><a href="stay_with_the_play.html" class="text-white underline">Stay with the Play</a> until it is over</strong>: Know when the play has ended so you can transition to the next phase. Do not release focus before the play concludes.
-        </li>
-      </ul>
-      <p class="mt-4 text-white">
-        The failure to adhere to these principles is the primary reason for many incorrect decisions on the floor. Consistently maintaining proper coverage improves the overall quality of officiating.
-      </p>
+      
+      <p class="mt-4 text-white" data-en>Below are key principles for effective refereeing:</p>
+      <p class="mt-4 text-white" data-pl style="display: none;">Poniżej przedstawiono kluczowe zasady skutecznego sędziowania:</p>
+
+      <table class="w-full mt-4 border-collapse border border-gray-300">
+        <thead>
+          <tr class="bg-gray-600 text-white">
+            <th class="border border-gray-300 px-4 py-2" data-en>Principle</th>
+            <th class="border border-gray-300 px-4 py-2" data-pl style="display: none;">Zasada</th>
+            <th class="border border-gray-300 px-4 py-2" data-en>Description</th>
+            <th class="border border-gray-300 px-4 py-2" data-pl style="display: none;">Opis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="bg-gray-100">
+            <td class="border border-gray-300 px-4 py-2"><a href="distance_stationary.html" class="text-blue-600 underline" data-en>Distance & Stationary</a><a href="distance_stationary.html" class="text-blue-600 underline" data-pl style="display: none;">Dystans i stabilność</a></td>
+            <td class="border border-gray-300 px-4 py-2" data-en>Maintain proper distance and remain stationary when contact occurs.</td>
+            <td class="border border-gray-300 px-4 py-2" data-pl style="display: none;">Utrzymuj odpowiednią odległość i pozostań nieruchomy w momencie kontaktu.</td>
+          </tr>
+          <tr class="bg-gray-200">
+            <td class="border border-gray-300 px-4 py-2"><a href="refereeing_defence.html" class="text-blue-600 underline" data-en>Referee the Defence</a><a href="refereeing_defence.html" class="text-blue-600 underline" data-pl style="display: none;">Sędziowanie obrony</a></td>
+            <td class="border border-gray-300 px-4 py-2" data-en>Focus on illegal actions by the defensive player.</td>
+            <td class="border border-gray-300 px-4 py-2" data-pl style="display: none;">Skoncentruj się na nielegalnych działaniach obrońcy.</td>
+          </tr>
+          <tr class="bg-gray-100">
+            <td class="border border-gray-300 px-4 py-2" data-en>Active Mind-set</td>
+            <td class="border border-gray-300 px-4 py-2" data-pl style="display: none;">Aktywne podejście</td>
+            <td class="border border-gray-300 px-4 py-2" data-en>Be ready for anything that might happen, actively seek potential threats.</td>
+            <td class="border border-gray-300 px-4 py-2" data-pl style="display: none;">Bądź gotowy na każdą sytuację, aktywnie szukaj potencjalnych zagrożeń.</td>
+          </tr>
+          <tr class="bg-gray-200">
+            <td class="border border-gray-300 px-4 py-2"><a href="positioning.html" class="text-blue-600 underline" data-en>45° & Open Angle</a><a href="positioning.html" class="text-blue-600 underline" data-pl style="display: none;">Kąt 45° i otwarta perspektywa</a></td>
+            <td class="border border-gray-300 px-4 py-2" data-en>Maximize players in your field of vision.</td>
+            <td class="border border-gray-300 px-4 py-2" data-pl style="display: none;">Maksymalizuj liczbę zawodników w swoim polu widzenia.</td>
+          </tr>
+          <tr class="bg-gray-100">
+            <td class="border border-gray-300 px-4 py-2"><a href="stay_with_the_play.html" class="text-blue-600 underline" data-en>Stay with the Play</a><a href="stay_with_the_play.html" class="text-blue-600 underline" data-pl style="display: none;">Pozostań z akcją</a></td>
+            <td class="border border-gray-300 px-4 py-2" data-en>Do not release focus before the play concludes.</td>
+            <td class="border border-gray-300 px-4 py-2" data-pl style="display: none;">Nie tracimy koncentracji przed zakończeniem akcji.</td>
+          </tr>
+        </tbody>
+      </table>
     </article>
 
     <div class="text-center">
@@ -51,7 +89,7 @@
 
   <footer class="bg-gray-800 text-gray-300 py-4">
     <div class="container mx-auto px-4 text-center">
-      <p>&copy; 2025 FIBA Referees Manual | Designed with Tailwind CSS</p>
+      <p>&copy; 2020 FIBA Referees Manual | Designed with Tailwind CSS</p>
     </div>
   </footer>
 </body>
