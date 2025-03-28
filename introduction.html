@@ -7,11 +7,8 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     function switchLanguage(lang) {
-      document.querySelectorAll("[data-en]").forEach(el => {
-        el.style.display = lang === 'en' ? 'block' : 'none';
-      });
-      document.querySelectorAll("[data-pl]").forEach(el => {
-        el.style.display = lang === 'pl' ? 'block' : 'none';
+      document.querySelectorAll("[data-lang]").forEach(el => {
+        el.innerHTML = el.getAttribute(`data-${lang}`);
       });
     }
   </script>
@@ -31,52 +28,64 @@
   </header>
 
   <main class="container mx-auto px-4 py-6 space-y-6">
-    <article class="bg-amber-500 p-4 rounded shadow-md">
-      <p class="text-white" data-en>
-        Individual Officiating Techniques (IOT) is the most important foundation for either 2 Person Officiating (2PO) or 3 Person Officiating (3PO). In the past 15 years, there has been a heavy focus on 3PO (namely for the mechanical movements of referees on the floor). This has led to a lack of knowledge in how to referee individual play phases, which are fundamental skills needed to process and facilitate correct decisions.
+    <article class="bg-amber-500 p-4 rounded shadow-md text-white">
+      <p data-lang data-en="Individual Officiating Techniques (IOT) is the most important foundation for either 2 Person Officiating (2PO) or 3 Person Officiating (3PO)." 
+         data-pl="Indywidualne Techniki Sędziowania (IOT) to najważniejsza podstawa zarówno dla 2-osobowego (2PO), jak i 3-osobowego (3PO) systemu sędziowania.">
       </p>
-      <p class="text-white" data-pl style="display: none;">
-        Indywidualne Techniki Sędziowania (IOT) to najważniejsza podstawa zarówno dla sędziowania w systemie 2-osobowym (2PO), jak i 3-osobowym (3PO). W ciągu ostatnich 15 lat duży nacisk położono na 3PO (głównie na ruchy mechaniczne sędziów na boisku). Doprowadziło to do braku wiedzy o tym, jak faktycznie sędziować poszczególne fazy gry, co jest podstawową umiejętnością potrzebną do podejmowania właściwych decyzji.
+
+      <p class="mt-4" data-lang data-en="Below are key principles for effective refereeing:" 
+         data-pl="Poniżej przedstawiono kluczowe zasady skutecznego sędziowania.">
       </p>
-      
-      <p class="mt-4 text-white" data-en>Below are key principles for effective refereeing:</p>
-      <p class="mt-4 text-white" data-pl style="display: none;">Poniżej przedstawiono kluczowe zasady skutecznego sędziowania:</p>
 
       <table class="w-full mt-4 border-collapse border border-gray-300">
         <thead>
           <tr class="bg-gray-600 text-white">
-            <th class="border border-gray-300 px-4 py-2" data-en>Principle</th>
-            <th class="border border-gray-300 px-4 py-2" data-pl style="display: none;">Zasada</th>
-            <th class="border border-gray-300 px-4 py-2" data-en>Description</th>
-            <th class="border border-gray-300 px-4 py-2" data-pl style="display: none;">Opis</th>
+            <th class="border border-gray-300 px-4 py-2" data-lang data-en="Principle" data-pl="Zasada"></th>
+            <th class="border border-gray-300 px-4 py-2" data-lang data-en="Description" data-pl="Opis"></th>
           </tr>
         </thead>
         <tbody>
           <tr class="bg-gray-100">
-            <td class="border border-gray-300 px-4 py-2"><a href="distance_stationary.html" class="text-blue-600 underline" data-en>Distance & Stationary</a><a href="distance_stationary.html" class="text-blue-600 underline" data-pl style="display: none;">Dystans i stabilność</a></td>
-            <td class="border border-gray-300 px-4 py-2" data-en>Maintain proper distance and remain stationary when contact occurs.</td>
-            <td class="border border-gray-300 px-4 py-2" data-pl style="display: none;">Utrzymuj odpowiednią odległość i pozostań nieruchomy w momencie kontaktu.</td>
+            <td class="border border-gray-300 px-4 py-2">
+              <a href="distance_stationary.html" class="text-blue-600 underline" 
+                 data-lang data-en="Distance & Stationary" data-pl="Dystans i stabilność"></a>
+            </td>
+            <td class="border border-gray-300 px-4 py-2" 
+                data-lang data-en="Maintain proper distance and remain stationary when contact occurs." 
+                data-pl="Utrzymuj odpowiednią odległość i pozostań nieruchomy w momencie kontaktu."></td>
           </tr>
           <tr class="bg-gray-200">
-            <td class="border border-gray-300 px-4 py-2"><a href="refereeing_defence.html" class="text-blue-600 underline" data-en>Referee the Defence</a><a href="refereeing_defence.html" class="text-blue-600 underline" data-pl style="display: none;">Sędziowanie obrony</a></td>
-            <td class="border border-gray-300 px-4 py-2" data-en>Focus on illegal actions by the defensive player.</td>
-            <td class="border border-gray-300 px-4 py-2" data-pl style="display: none;">Skoncentruj się na nielegalnych działaniach obrońcy.</td>
+            <td class="border border-gray-300 px-4 py-2">
+              <a href="refereeing_defence.html" class="text-blue-600 underline" 
+                 data-lang data-en="Referee the Defence" data-pl="Sędziowanie obrony"></a>
+            </td>
+            <td class="border border-gray-300 px-4 py-2" 
+                data-lang data-en="Focus on illegal actions by the defensive player." 
+                data-pl="Skoncentruj się na nielegalnych działaniach obrońcy."></td>
           </tr>
           <tr class="bg-gray-100">
-            <td class="border border-gray-300 px-4 py-2" data-en>Active Mind-set</td>
-            <td class="border border-gray-300 px-4 py-2" data-pl style="display: none;">Aktywne podejście</td>
-            <td class="border border-gray-300 px-4 py-2" data-en>Be ready for anything that might happen, actively seek potential threats.</td>
-            <td class="border border-gray-300 px-4 py-2" data-pl style="display: none;">Bądź gotowy na każdą sytuację, aktywnie szukaj potencjalnych zagrożeń.</td>
+            <td class="border border-gray-300 px-4 py-2" data-lang data-en="Active Mind-set" data-pl="Aktywne podejście"></td>
+            <td class="border border-gray-300 px-4 py-2" 
+                data-lang data-en="Be ready for anything that might happen, actively seek potential threats." 
+                data-pl="Bądź gotowy na każdą sytuację, aktywnie szukaj potencjalnych zagrożeń."></td>
           </tr>
           <tr class="bg-gray-200">
-            <td class="border border-gray-300 px-4 py-2"><a href="positioning.html" class="text-blue-600 underline" data-en>45° & Open Angle</a><a href="positioning.html" class="text-blue-600 underline" data-pl style="display: none;">Kąt 45° i otwarta perspektywa</a></td>
-            <td class="border border-gray-300 px-4 py-2" data-en>Maximize players in your field of vision.</td>
-            <td class="border border-gray-300 px-4 py-2" data-pl style="display: none;">Maksymalizuj liczbę zawodników w swoim polu widzenia.</td>
+            <td class="border border-gray-300 px-4 py-2">
+              <a href="positioning.html" class="text-blue-600 underline" 
+                 data-lang data-en="45° & Open Angle" data-pl="Kąt 45° i otwarta perspektywa"></a>
+            </td>
+            <td class="border border-gray-300 px-4 py-2" 
+                data-lang data-en="Maximize players in your field of vision." 
+                data-pl="Maksymalizuj liczbę zawodników w swoim polu widzenia."></td>
           </tr>
           <tr class="bg-gray-100">
-            <td class="border border-gray-300 px-4 py-2"><a href="stay_with_the_play.html" class="text-blue-600 underline" data-en>Stay with the Play</a><a href="stay_with_the_play.html" class="text-blue-600 underline" data-pl style="display: none;">Pozostań z akcją</a></td>
-            <td class="border border-gray-300 px-4 py-2" data-en>Do not release focus before the play concludes.</td>
-            <td class="border border-gray-300 px-4 py-2" data-pl style="display: none;">Nie tracimy koncentracji przed zakończeniem akcji.</td>
+            <td class="border border-gray-300 px-4 py-2">
+              <a href="stay_with_the_play.html" class="text-blue-600 underline" 
+                 data-lang data-en="Stay with the Play" data-pl="Pozostań z akcją"></a>
+            </td>
+            <td class="border border-gray-300 px-4 py-2" 
+                data-lang data-en="Do not release focus before the play concludes." 
+                data-pl="Nie tracimy koncentracji przed zakończeniem akcji."></td>
           </tr>
         </tbody>
       </table>
@@ -89,8 +98,13 @@
 
   <footer class="bg-gray-800 text-gray-300 py-4">
     <div class="container mx-auto px-4 text-center">
-      <p>&copy; 2020 FIBA Referees Manual | Designed with Tailwind CSS</p>
+      <p>&copy; 2025 FIBA Referees Manual | Designed with Tailwind CSS</p>
     </div>
   </footer>
+
+  <script>
+    // Default language on load
+    switchLanguage('en');
+  </script>
 </body>
 </html>
