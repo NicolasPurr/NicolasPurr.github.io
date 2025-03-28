@@ -20,25 +20,28 @@
       </ul>
     </article>
 
-	<!-- Example of a pulsating image with three animated dots -->
+	<!-- Example of a pulsating image with three animated dots on top -->
 	<section class="bg-white p-4 rounded shadow-md">
   	<h2 class="text-xl font-semibold mb-2">Example Image with Pulsating Dots</h2>
   	<div class="relative inline-block">
-    <!-- Larger image -->
+    <!-- Larger image with lower z-index -->
     <img src="assets/shot.jpg" alt="Example Image" class="relative z-10 w-96 h-auto rounded">
-    <!-- Center dot -->
-    <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+    <!-- Center dot with higher z-index -->
+    <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
       <div class="w-4 h-4 bg-purple-400 rounded-full opacity-75 animate-ping"></div>
     </div>
-    <!-- Top dot -->
-    <div class="absolute left-1/2 top-4 transform -translate-x-1/2">
+    <!-- Top dot with higher z-index -->
+    <div class="absolute left-1/2 top-4 transform -translate-x-1/2 z-20">
       <div class="w-4 h-4 bg-purple-400 rounded-full opacity-75 animate-ping"></div>
     </div>
-    <!-- Bottom dot -->
-    <div class="absolute left-1/2 bottom-4 transform -translate-x-1/2">
-     <div class="w-4 h-4 bg-purple-400 rounded-full opacity-75 animate-ping"></div>
+    <!-- Bottom dot with higher z-index -->
+    <div class="absolute left-1/2 bottom-4 transform -translate-x-1/2 z-20">
+      <div class="w-4 h-4 bg-purple-400 rounded-full opacity-75 animate-ping"></div>
     </div>
   	</div>
+ 	 <p class="mt-2 text-sm text-gray-600">
+    This image has three pulsating dots positioned on top of it using a higher z-index.
+ 	 </p>
 	</section>
 
     <div class="text-center">
