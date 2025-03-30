@@ -9,13 +9,34 @@ function loadPartial(elementId, file, callback) {
       .catch(err => console.error('Error loading partial:', err));
 }
 
+function updatePageTitle() {
+    const filename = window.location.pathname.split('/').pop(); // Get file name
+    const match = filename.match(/^(\d{2})_(.*)\.html$/); // Match "01_title.html" format
+
+    if (match) {
+        const chapterNumber = match[1]; // Extract chapter number (01, 02, etc.)
+        const pageTitle = match[2].replace(/_/g, " "); // Extract title, replace underscores with spaces
+
+        // Set the document title dynamically
+        document.title = `${chapterNumber} ${pageTitle} - FIBA Referees Manual`;
+
+        // Update the header title as well (if applicable)
+        const pageTitleElement = document.getElementById("page-title");
+        if (pageTitleElement) {
+            pageTitleElement.textContent = `${chapterNumber} ${pageTitle}`;
+        }
+    }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   loadPartial('header', 'partials/header.html', function () {
-      applyDynamicHeaderStyle(); 
-      applySavedLanguage(); // Ensure language is applied after loading
+        updatePageTitle();
+        applyDynamicHeaderStyle(); 
+        applySavedLanguage(); // Ensure language is applied after loading
   });
   loadPartial('footer', 'partials/footer.html', function () {
-      applySavedLanguage(); // Apply language after the footer loads too
+        updatePageTitle();
+        applySavedLanguage(); // Apply language after the footer loads too
   });
 });
 
