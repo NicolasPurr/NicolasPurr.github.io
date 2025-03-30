@@ -106,22 +106,22 @@
         <img src="assets/shot.jpg" alt="Example Image" class="w-full h-auto rounded">
     
         <!-- Top dot -->
-        <div class="absolute top-[8%] left-[51%]">
-          <div class="bg-blue-400 rounded-full opacity-85 animate-ping" style="width: 25%; height: 25%;"></div>
+        <div class="absolute top-[8%] left-[51%]" id="dot1">
+          <div class="bg-blue-400 rounded-full opacity-85 animate-ping"></div>
         </div>
     
         <!-- Slightly lower dot -->
-        <div class="absolute top-[14%] left-[53%]">
+        <div class="absolute top-[14%] left-[53%]" id="dot2">
           <div class="w-[2%] h-[2%] bg-blue-400 rounded-full opacity-85 animate-ping"></div>
         </div>
     
         <!-- Center dot -->
-        <div class="absolute top-[40%] left-[49%]">
-          <div class="bg-purple-400 rounded-full opacity-85 animate-ping" style="width: 25%; height: 25%;"></div>
+        <div class="absolute top-[40%] left-[49%]" id="dot3">
+          <div class="bg-purple-400 rounded-full opacity-85 animate-ping""></div>
         </div>
 
         <!-- Bottom dot -->
-        <div class="absolute bottom-[10%] left-[47%]">
+        <div class="absolute bottom-[10%] left-[47%]" id="dot4">
           <div class="w-[2%] h-[2%] bg-red-400 rounded-full opacity-85 animate-ping"></div>
         </div>
       </div>
@@ -138,8 +138,37 @@
   </footer>
 
   <script>
+    window.onload = function () {
+    // Get the image and its size
+    const image = document.getElementById('shotImage');
+    
+    // Get the dots by their IDs
+    const dot1 = document.getElementById('dot1');
+    const dot2 = document.getElementById('dot2');
+    const dot3 = document.getElementById('dot3');
+    
+    // Calculate relative dot size based on image width (as percentage)
+    const imageWidth = image.offsetWidth;
+
+    // Adjust dot size relative to the image width (e.g., 2% of image width)
+    const dotSize1 = imageWidth * 0.02;  // 2% of the image width
+    const dotSize2 = imageWidth * 0.02;  // 2% of the image width
+    const dotSize3 = imageWidth * 0.25; // 25% of the image width (for the center dot)
+
+    // Set the size of the dots dynamically
+    dot1.querySelector('div').style.width = `${dotSize1}px`;
+    dot1.querySelector('div').style.height = `${dotSize1}px`;
+
+    dot2.querySelector('div').style.width = `${dotSize2}px`;
+    dot2.querySelector('div').style.height = `${dotSize2}px`;
+
+    dot3.querySelector('div').style.width = `${dotSize3}px`;
+    dot3.querySelector('div').style.height = `${dotSize3}px`;
+  };
+
     // Default language on load
-    switchLanguage('en');
+    if(getCookie("language") == null)
+      switchLanguage('en');
   </script>
 </body>
 </html>
