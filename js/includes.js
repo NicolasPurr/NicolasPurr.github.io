@@ -14,10 +14,10 @@ function updatePageTitle() {
     const match = filename.match(/^(\d{2})_(.*)\.html$/); // Match "01_title.html" format
 
     if (match) {
-        const chapterNumber = match[1]; // Extract chapter number (01, 02, etc.)
+        let chapterNumber = match[1]; // Extract chapter number (01, 02, etc.)
         const pageTitle = match[2].replace(/_/g, " ").toUpperCase(); // Extract title, replace underscores with spaces
 
-        if (chapterNumber[0] == '0')
+        if (chapterNumber[0] === '0')
             chapterNumber = '2.' + chapterNumber[1];
         else
             chapterNumber = '2.' + chapterNumber;
