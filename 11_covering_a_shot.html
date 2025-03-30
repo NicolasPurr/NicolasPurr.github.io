@@ -5,12 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>2.11 COVERING A SHOT - FIBA Referees Manual</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  
   <script>
+    function setCookie(name, value, days) {
+      let expires = "";
+      if (days) {
+        const date = new Date();
+        date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+        expires = "; expires=" + date.toUTCString();
+      }
+      document.cookie = name + "=" + value + "; path=/" + expires;
+    }
+
+    function getCookie(name) {
+      const cookies = document.cookie.split("; ");
+      for (let cookie of cookies) {
+        const [key, value] = cookie.split("=");
+        if (key === name) return value;
+      }
+      return null;
+    }
+
     function switchLanguage(lang) {
       document.querySelectorAll("[data-lang]").forEach(el => {
         el.innerHTML = el.getAttribute(`data-${lang}`);
       });
+      setCookie("language", lang, 30); // Save language for 30 days
     }
+
+    // On page load, apply saved language or default to English
+    document.addEventListener("DOMContentLoaded", () => {
+      const savedLang = getCookie("language") || "en"; 
+      switchLanguage(savedLang);
+    });
   </script>
 
   <style>
@@ -37,7 +64,7 @@
   </header>
 
   <main class="container mx-auto px-4 py-6 space-y-6">
-    
+
     <article class="bg-amber-500 p-4 rounded shadow-md">
       <p class="text-white"
         data-lang data-en="Referees should have full coverage on obvious situations in their primary. A shot is an obvious play – 
