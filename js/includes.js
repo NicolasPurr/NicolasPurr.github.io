@@ -1,22 +1,20 @@
 // /js/includes.js
-function loadPartial(elementId, file) {
-    fetch(file)
+function loadPartial(elementId, file, callback) {
+  fetch(file)
       .then(response => response.text())
       .then(html => {
-        document.getElementById(elementId).innerHTML = html;
+          document.getElementById(elementId).innerHTML = html;
+          if (callback) callback(); // Call the callback function after loading
       })
       .catch(err => console.error('Error loading partial:', err));
-  }
-  
+}
+
 document.addEventListener("DOMContentLoaded", function() {
-    // Use a custom attribute on <body> to decide which header to load
-    const headerFile = document.body.getAttribute('data-header') || 'partials/header.html';
-    loadPartial('header', headerFile);
-    loadPartial('footer', 'partials/footer.html');
-    includeHTML(function() {
+  loadPartial('header', 'partials/header.html', function() {
       setHeaderStyle("bg-gray-600", "text-amber-500", "bg-gray-600");
-    });
   });
+  loadPartial('footer', 'partials/footer.html');
+});
 
 function setHeaderStyle(bgColor, textColor, btnBgColor) {
     const header = document.getElementById("main-header");
