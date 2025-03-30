@@ -15,7 +15,12 @@ function updatePageTitle() {
 
     if (match) {
         const chapterNumber = match[1]; // Extract chapter number (01, 02, etc.)
-        const pageTitle = match[2].replace(/_/g, " "); // Extract title, replace underscores with spaces
+        const pageTitle = match[2].replace(/_/g, " ").toUpperCase(); // Extract title, replace underscores with spaces
+
+        if (chapterNumber[0] == '0')
+            chapterNumber = '2.' + chapterNumber[1];
+        else
+            chapterNumber = '2.' + chapterNumber;
 
         // Set the document title dynamically
         document.title = `${chapterNumber} ${pageTitle} - FIBA Referees Manual`;
