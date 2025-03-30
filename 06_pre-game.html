@@ -72,12 +72,13 @@
       </p>
 
       <ul class="list-decimal pl-6 mt-4 text-white">
-        <li data-lang
-          data-en=""
+        <li class="mt-4"
+          data-lang data-en="Know your areas of responsibility on the floor and avoid having both referees watch the ball and 
+          the players immediately surrounding it."
           data-pl="">
         </li>
-        <li data-lang
-          data-en=""
+        <li class="mt-4"
+          data-lang data-en="Referee the play away from the ball when it is your primary responsibility."
           data-pl="">
         </li>
         <li data-lang
@@ -122,14 +123,16 @@
       </p>
 
       <div class="flex flex-col items-center space-y-8">
-        <!-- First Image - Centered and smaller -->
-        <img 
-          src="assets/iref_icon.jpg" 
-          alt="FIBA iRef PG App icon" 
-          class="w-48 h-auto rounded mx-auto"> <!-- Smaller size and centered -->
+        <!-- First Image - Centered relative to the next two images -->
+        <div class="relative w-full flex justify-center">
+          <img 
+            src="assets/iref_icon.jpg" 
+            alt="FIBA iRef PG App icon" 
+            class="w-48 h-auto rounded mx-auto absolute">
+        </div>
       
-        <!-- Second Row: Two images side by side -->
-        <div class="flex flex-row justify-center space-x-8">
+        <!-- Second Row: Two images side by side, aligned to the left -->
+        <div class="flex flex-row justify-start space-x-8 w-full px-8">
           <!-- First Image (App Store) -->
           <a href="https://www.apple.com/app-store/" class="flex-shrink-0">
             <img 
@@ -146,8 +149,7 @@
               class="w-48 h-auto rounded">
           </a>
         </div>
-      </div>
-      
+      </div>      
 
     </article>
     
