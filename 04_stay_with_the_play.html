@@ -3,21 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2.4 STAY WITH THE PLAY - FIBA Referees Manual</title>
+  <title>2.2 DISTANCE & STATIONARY - FIBA Referees Manual</title>
   <script src="https://cdn.tailwindcss.com"></script>
+
   <script>
+    function setCookie(name, value, days) {
+      let expires = "";
+      if (days) {
+        const date = new Date();
+        date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+        expires = "; expires=" + date.toUTCString();
+      }
+      document.cookie = name + "=" + value + "; path=/" + expires;
+    }
+
+    function getCookie(name) {
+      const cookies = document.cookie.split("; ");
+      for (let cookie of cookies) {
+        const [key, value] = cookie.split("=");
+        if (key === name) return value;
+      }
+      return null;
+    }
+
     function switchLanguage(lang) {
       document.querySelectorAll("[data-lang]").forEach(el => {
         el.innerHTML = el.getAttribute(`data-${lang}`);
       });
+      setCookie("language", lang, 30); // Save language for 30 days
     }
+
+    // On page load, apply saved language or default to English
+    document.addEventListener("DOMContentLoaded", () => {
+      const savedLang = getCookie("language") || "en"; 
+      switchLanguage(savedLang);
+    });
   </script>
+
+  <style>
+    .list-alpha {
+      list-style-type: lower-alpha;
+    }
+  </style>
+
 </head>
+
 <body class="bg-gray-100 text-gray-800">
   <header class="bg-amber-500 text-gray-800 py-4 shadow-lg">
     <div class="container mx-auto px-4 flex justify-between items-center">
       <div>
-        <h1 class="text-3xl font-bold text-white">2.4 STAY WITH THE PLAY</h1>
+        <h1 class="text-3xl font-bold text-white">2.2 DISTANCE & STATIONARY</h1>
         <p class="text-lg text-gray-600"><a href="index.html">FIBA Referees Manual - Chapter 2: IOT</a></p>
       </div>
       <div>
@@ -28,24 +63,63 @@
   </header>
 
   <main class="container mx-auto px-4 py-6 space-y-6">
-    <article class="bg-red-100 p-4 rounded shadow-md">
-      <p>
-        This chapter explains why it is essential to remain with the play until its conclusion, ensuring that no obvious foul goes unnoticed.
-      </p>
-      <p class="mt-4">
-        For more on whistle techniques and communication, refer to our <a href="making_call.html" class="text-blue-500 underline">Making a Call, Decision Making & Communication</a> chapter.
-      </p>
-    </article>
+    <article class="bg-gray-600 p-4 rounded shadow-md text-white">
+     
+      <p
+        data-lang data-en="On occasions, referees miss an obvious foul. Unfortunately, it often looks like the only persons 
+        in the arena who missed the obvious foul were the two or three persons on the court who have the whistle. 
+        The key to correctly calling these obvious plays is by adopting a professional discipline – that is to be patient 
+        and careful every time you referee the play. It is expected referees will “stay with the play until the end of action” 
+        (that is keeping your eyes and attention on the play until it has ended)."
+        data-pl='Czasem sędziom ucieknie oczywisty faul. Niestety w takich sytuacjach często wydaje się, że sędziowie są jedynymi 
+        osobami w hali sportowej, które nie widziały oczywistego faulu. Kluczem do prawidłowej oceny <strong>oczywistych zagrań</strong> 
+        jest przyjęcie profesjonalnej dyscypliny - cierpliwości i dokładności w ocenie każdego zagrania. Oczekujemy, że sędziowie 
+        "pozostaną z akcją do konća", czyli utrzymają oczy i uwagę na akcji, dopóki się nie zakończy.'
+      ></p>
 
-    <div class="text-center">
-      <a href="index.html" class="text-blue-500 underline">&larr; Back to Overview</a>
-    </div>
+      <p class="mt-4"
+      data-lang data-en="Practically, referees need to implement strategies:"
+      data-pl="W praktyce sędziowie muszą wdrożyć następujące strategie:"
+      ></p>
+
+      <ul class="list-alpha pl-6 mt-2 text-white">
+        <li data-lang
+          data-en="mentally focussing on the defender until the play has come to its end e.g. shooter has landed, in penetration 
+          defender has landed,"
+          data-pl="mentalne skupienie na obroncy do zakończenia zagrania, tj. rzucający opadł na parkiet, obrońca opadł na parkiet 
+          podczas penetracji,">
+        </li>
+        <li data-lang
+          data-en="physically do not start to move; Trail / Centre stepping backwards on the shot – has the potential for the referee 
+          to mentally release the play before ball has entered the basket or the defensive team has gained control of the rebound."
+          data-pl='statyczna pozycja do zakończenia zagrania; Trail / Center wykonujący krok w tył podczas rzutu może skutkować
+          "mentalnym uwolnieniem" akcji, zanim piłka wpadła do kosza lub drużyna weszła w posiadanie piłki po zbiórce.'>
+        </li>
+      </ul>
+
+      <h2 class="mt-4"
+        data-lang data-en="<strong>Processing the play (Patient Whistle)</strong>"
+        data-pl="<strong>Procesowanie zagrania (Cierpliwy gwizdek)</strong>">
+      </h2>
+
+      <p class="mt-4"
+        data-lang data-en="Before blowing their whistle referees should process the entire play from the start - through the development 
+        - until the end before making a call. This will produce more analytical decision instead of only seeing the end of the play 
+        and reacting to it (emotional decision)."
+        data-pl='Przed użyciem gwizdka sędziowie powinni przeanalizować całe zagranie, począwszy od rozpoczęcia - przez rozwinięcie 
+        - aż po zakończenie. Pozwala to na podjęcie analitycznej decyzji, zamiast reagowanie jedynie na zakończenie zagrania 
+        (emocjonalna decyzja, tzw. "emo-call")'>
+      </p>
+    
+    </article>
   </main>
 
   <footer class="bg-gray-800 text-gray-300 py-4">
     <div class="container mx-auto px-4 text-center">
-      <p>&copy; 2025 FIBA Referees Manual</p>
+      <p>&copy; <a class="underline" href="https://refereeing.fiba.basketball/fr/documents/category/manuals-for-fiba-referees">
+        2024 FIBA Referees Manual</a> | Designed with Tailwind CSS</p>
     </div>
   </footer>
+
 </body>
 </html>
