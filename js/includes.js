@@ -13,6 +13,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const headerFile = document.body.getAttribute('data-header') || 'partials/header.html';
     loadPartial('header', headerFile);
     loadPartial('footer', 'partials/footer.html');
+    includeHTML(function() {
+      setHeaderStyle("bg-gray-600", "text-amber-500", "bg-gray-600");
+    });
   });
 
 function setHeaderStyle(bgColor, textColor, btnBgColor) {
@@ -31,11 +34,3 @@ function setHeaderStyle(bgColor, textColor, btnBgColor) {
         btn.classList.add(btnBgColor, "text-white");
     });
 }
-
-document.addEventListener("DOMContentLoaded", function() {
-  includeHTML(function() {
-      setHeaderStyle("bg-gray-600", "text-amber-500", "bg-gray-600");
-  });
-});
-
-  
