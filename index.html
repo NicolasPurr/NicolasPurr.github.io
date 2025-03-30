@@ -12,16 +12,19 @@
     }
 
     .basketball {
-      width: 70px;
-      height: 70px;
-      background-color: #f57c00;
-      border-radius: 50%;
-      position: relative;
-      animation: bounce 0.6s infinite ease-in-out;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+  width: 70px;
+  height: 70px;
+  background-color: #f57c00;
+  border-radius: 50%;
+  position: relative;
+  animation: bounce 0.6s infinite ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('assets/whistle.jpg'); /* Add your image URL here */
+  background-size: cover; /* Makes the image cover the ball */
+  background-position: center; /* Ensures the image is centered */
+}
 
     /* Curved line class (outward curves) */
     .curve {
@@ -105,50 +108,134 @@
         title: "FIBA Referees Manual",
         subtitle: "Chapter 2: Individual Officiating Techniques",
         chapters: [
-          { title: "2.1 INTRODUCTION", desc: "Primary coverage in obvious plays.", link: "01_introduction.html" },
-          { title: "2.2 DISTANCE & STATIONARY", desc: "To identify and understand the key points and impact of maintaining a proper "
-          + "distance from the play and being stationary when refereeing competitive match ups.", link: "02_distance_stationary.html" },
-          { title: "2.3 REFEREEING THE DEFENCE", desc: "Focus on defenders to spot fouls.", link: "03_refereeing_defence.html" },
-          { title: "2.4 STAY WITH THE PLAY", desc: "Remain engaged until the action ends.", link: "stay_with_the_play.html" },
-          { title: "2.5 POSITIONING, OPEN ANGLE & ADJUSTMENTS", desc: "Use correct positioning to see more players.", 
-          link: "positioning.html" },
-          { title: "2.6 PRE-GAME CONFERENCE", desc: "Key topics referees should discuss pre-game.", link: "pre_game.html" },
-          { title: "2.7 MAKING A CALL, DECISION MAKING & COMMUNICATION", desc: "Techniques for signaling and whistle use.",
-          link: "making_call.html" },
-          { title: "2.8 SIGNALS & REPORTING", desc: "Proper use of signals for consistency.", link: "signals_reporting.html" },
-          { title: "2.9 JUMP BALL - ACTIVE REFEREE", desc: "How to administer the jump ball as Crew Chief.", link: "active_jump_ball.html" },
-          { title: "2.10 JUMP BALL - PASSIVE REFEREE(S)", desc: "Handling the most complex moment in a match.",
+
+          { title: "2.1 INTRODUCTION",
+          desc: "Primary coverage in obvious plays.",
+          link: "01_introduction.html" },
+
+          { title: "2.2 DISTANCE & STATIONARY",
+          desc: "To identify and understand the key points and impact of maintaining a proper distance from the play and being " +
+          "stationary when refereeing competitive match ups.",
+          link: "02_distance_stationary.html" },
+          
+          { title: "2.3 REFEREEING THE DEFENCE",
+          desc: "To identify the primary focus when analysing a 1 on 1 play.",
+          link: "03_refereeing_defence.html" },
+
+          { title: "2.4 STAY WITH THE PLAY",
+          desc: "To understand how to increase quality control in play situations.",
+          link: "04_stay_with_the_play.html" },
+
+          { title: "2.5 POSITIONING, OPEN ANGLE & ADJUSTMENTS",
+          desc: "To understand the impact and technique of maximising the number of the players within your field of vision at all " +
+          "times.", 
+          link: "05_positioning.html" },
+
+          { title: "2.6 PRE-GAME CONFERENCE",
+          desc: "To know the topics that have to be covered during the pre-game conference and " +
+          "what functionalities are offered by the App.",
+          link: "06_pre_game.html" },
+
+          { title: "2.7 MAKING A CALL, DECISION MAKING & COMMUNICATION",
+          desc: "To know how to make the call and being able to immediately communicate the decision verbally and with standard " +
+          "hand signals.",
+          link: "07_decisions.html" },
+
+          { title: "2.8 SIGNALS & REPORTING",
+          desc: "To identify the different phases and techniques of having strong and decisive signals as part of court presence.",
+          link: "08_signals_reporting.html" },
+          
+          { title: "2.9 JUMP BALL - ACTIVE REFEREE",
+          desc: "To identify the different phases and correct techniques during the ball toss.",
+          link: "09_active_jump_ball.html" },
+
+          { title: "2.10 JUMP BALL - PASSIVE REFEREE(S)",
+          desc: "To identify the different tasks and techniques for non-administrating (passive) referees during the ball toss.",
           link: "passive_jump_ball.html" },
-          { title: "2.11 COVERING A SHOT (PROTECT THE SHOOTER)", desc: "Ensuring full coverage during a shot attempt.",
-          link: "covering_a_shot.html" },
-          { title: "2.12 THROW-IN ADMINISTRATION", desc: "Proper procedure of administering the throw-ins.",
+          
+          { title: "2.11 COVERING A SHOT (PROTECT THE SHOOTER)",
+          desc: "To have full coverage on all act of shooting situations.",
+          link: "11_covering_a_shot.html" },
+          
+          { title: "2.12 THROW-IN ADMINISTRATION",
+          desc: "To identify the standard phases and correct administration procedure for all throw-in situations.",
           link: "throw_in_administration.html" },
-          { title: "2.13 FAKE A FOUL", desc: "Proper identification and management of faking.", link: "fake_a_foul.html" },
-          { title: "2.14 CONTROL OF THE GAME AND SHOT CLOCK", desc: "Timed habit of controlling the game and shot clocks.",
+          
+          { title: "2.13 FAKE A FOUL",
+          desc: "To know what is a fake and how to manage the situation when it occurs.",
+          link: "fake_a_foul.html" },
+          
+          { title: "2.14 CONTROL OF THE GAME AND SHOT CLOCK",
+          desc: "Identify the correct techniques of how to control the game & shot clock.\n" +
+          "Identify the most common play situation where a possible error might occur.\n" + 
+          "Identify the correct procedure and methods of how to re-set the game or shot clock.",
           link: "control_of_clocks.html" },
         ]
       },
+
       pl: {
         title: "Podręcznik Sędziów FIBA",
         subtitle: "Rozdział 2: Indywidualne Techniki Sędziowania",
         chapters: [
-          { title: "2.1 WPROWADZENIE", desc: "Ocena oczywistych zagrań w podstawowej strefie odpowiedzialności.", 
+          { title: "2.1 WPROWADZENIE",
+          desc: "Ocena oczywistych zagrań w podstawowym obszarze odpowiedzialności.", 
           link: "01_introduction.html" },
-          { title: "2.2 DYSTANS I STATYCZNA POZYCJA", desc: "Identyfikuj i zrozum istotę utrzymania odpowiedniego dystansu "
-          + "i utrzymania statycznej pozycji podczas oceny aktywnych par zawodników.", link: "02_distance_stationary.html" },
-          { title: "2.3 SĘDZIOWANIE OBRONY", desc: "Skup uwagę na legalności gry obrońcy, oceniając grę 1 na 1", 
+
+          { title: "2.2 DYSTANS I STATYCZNA POZYCJA",
+          desc: "Istota i techniki utrzymywania odpowiedniego dystansu od akcji "
+          + "i statycznej pozycji podczas oceny aktywnych par zawodników.",
+          link: "02_distance_stationary.html" },
+
+          { title: "2.3 SĘDZIOWANIE OBRONY",
+          desc: "Skupienie uwagi na legalności gry obrońcy w ocenie gry 1 na 1.", 
           link: "03_refereeing_defence.html" },
-          { title: "2.4 POZOSTAŃ Z AKCJĄ", desc: "Poprawna identyfikacja zakończenia akcji.", link: "stay_with_the_play.html" },
-          { title: "2.5 POZYCJONOWANIE I OTWARTY KĄT", desc: "Bądź tam, gdzie musisz być, żeby zobaczyć to, co musisz zobaczyć.", link: "positioning.html" },
-          { title: "2.6 ROZMOWA PRZEDMECZOWA", desc: "Co omówić przed meczem.", link: "pre_game.html" },
-          { title: "2.7 DECYZJE I KOMUNIKACJA", desc: "Techniki podejmowania decyzji i ich komunikowania.", link: "making_call.html" },
-          { title: "2.8 SYGNALIZACJA", desc: "Poprawne użycie sygnałów.", link: "signals_reporting.html" },
-          { title: "2.9 RZUT SĘDZIOWSKI - SĘDZIA AKTYWNY", desc: "Administrowanie rzutu sędziowskiego.", link: "active_jump_ball.html" },
-          { title: "2.10 RZUT SĘDZIOWSKI - SĘDZIOWIE PASYWNI", desc: "Najbardziej złożona sytuacja do oceny.", link: "passive_jump_ball.html" },
-          { title: "2.11 OCHRONA STRZELCA", desc: "Ocena rzutów z (pół-)dystansu i ochrona strzelca.", link: "covering_a_shot.html" },
-          { title: "2.12 WPROWADZENIE PIŁKI", desc: "Administrowanie wprowadzenia piłki.", link: "throw_in_administration.html" },
-          { title: "2.13 UDAWANIE FAULU (FLOP)", desc: "Identyfikacja i reakcja na udawanie faulu.", link: "fake_a_foul.html" },
-          { title: "2.14 KONTROLA ZEGARÓW", desc: "Techniki kontroli zegara czasu gry i czasu akcji.", link: "control_of_clocks.html" },
+          
+          { title: "2.4 POZOSTAŃ Z AKCJĄ",
+          desc: "Zwiększenie kontroli jakości podczas akcji.",
+          link: "04_stay_with_the_play.html" },
+          
+          { title: "2.5 POZYCJONOWANIE I OTWARTY KĄT",
+          desc: "Istota i techniki utrzymywania jak największej liczby zawodników w polu widzenia.",
+          link: "05_positioning.html" },
+        
+          { title: "2.6 ROZMOWA PRZEDMECZOWA",
+          desc: "Tematy do omówienia podczas rozmowy przedmeczowej i prezentacja aplikacji FIBA iRef Pre-Game",
+          link: "06_pre_game.html" },
+          
+          { title: "2.7 DECYZJE I KOMUNIKACJA",
+          desc: "Techniki podejmowania decyzji i ich natychmiastowego komunikowania w sposób werbalny oraz używając standardowych " +
+          "gestów.",
+          link: "07_decisions.html" },
+          
+          { title: "2.8 SYGNALIZACJA",
+          desc: "Etapy i techniki sygnalizacji - fundamentu prezencji boiskowej.",
+          link: "08_signals_reporting.html" },
+          
+          { title: "2.9 RZUT SĘDZIOWSKI - SĘDZIA AKTYWNY",
+          desc: "Etapy i techniki wykonania rzutu sędziowskiego.",
+          link: "09_active_jump_ball.html" },
+
+          { title: "2.10 RZUT SĘDZIOWSKI - SĘDZIOWIE PASYWNI",
+          desc: "Obowiązki i techniki sędziów pasywych podczas rzutu sędziowskiego.",
+          link: "passive_jump_ball.html" },
+          
+          { title: "2.11 OCHRONA STRZELCA",
+          desc: "Pełna kontrola i prawidłowa ocena wszystkich akcji rzutowych.",
+          link: "11_covering_a_shot.html" },
+          
+          { title: "2.12 WPROWADZENIE PIŁKI",
+          desc: "Administrowanie i identyfikacja standardowych etapów wprowadzenia piłki.",
+          link: "throw_in_administration.html" },
+          
+          { title: "2.13 UDAWANIE FAULU (FLOP)",
+          desc: "Identyfikacja i reakcja na udawanie faulu.",
+          link: "fake_a_foul.html" },
+          
+          { title: "2.14 KONTROLA ZEGARÓW",
+          desc: "Techniki kontroli zegara czasu gry i czasu akcji.\n" +
+          "Identyfikacja sytuacji, w których najczęściej zdarzają się błędy.\n" +
+          "Procedura korekty czasu gry i czasu akcji.",
+          link: "control_of_clocks.html" },
         ]
       }
     };
