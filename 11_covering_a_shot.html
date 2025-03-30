@@ -117,12 +117,12 @@
     
         <!-- Center dot -->
         <div class="absolute top-[40%] left-[49%]" id="dot3">
-          <div class="bg-purple-400 rounded-full opacity-85 animate-ping""></div>
+          <div class="w-16 h-16 bg-purple-400 rounded-full opacity-85 animate-ping""></div>
         </div>
 
         <!-- Bottom dot -->
         <div class="absolute bottom-[10%] left-[47%]" id="dot4">
-          <div class="bg-red-400 rounded-full opacity-85 animate-ping"></div>
+          <div class="w-8 h-8 bg-red-400 rounded-full opacity-85 animate-ping"></div>
         </div>
       </div>
     </section>
@@ -147,13 +147,13 @@
       const dot2 = document.getElementById('dot2');
       const dot3 = document.getElementById('dot3');
       
-      // Calculate relative dot size based on image width (as percentage)
+      // Calculate relative dot size based on image width
       const imageWidth = image.offsetWidth;
 
-      // Adjust dot size relative to the image width (e.g., 2% of image width)
-      const dotSize1 = imageWidth * 0.1;  // 2% of the image width
-      const dotSize2 = imageWidth * 0.02;  // 2% of the image width
-      const dotSize3 = imageWidth * 0.25; // 25% of the image width (for the center dot)
+      // Adjust dot size relative to the image width
+      const dotSize1 = imageWidth * 0.1;
+      const dotSize2 = imageWidth * 0.02;
+      const dotSize3 = imageWidth * 0.25;
 
       // Set the size of the dots dynamically
       dot1.querySelector('div').style.width = `${dotSize1}px`;
