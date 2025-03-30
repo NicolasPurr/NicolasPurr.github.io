@@ -241,7 +241,25 @@
       }
     };
 
+    function setCookie(name, value, days) {
+      const expires = new Date();
+      expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000); // Cookie expiration time
+      document.cookie = `${name}=${value}; expires=${expires.toUTCString()}; path=/`;
+    }
+
+    function getCookie(name) {
+      const cookies = document.cookie.split("; ");
+      for (const cookie of cookies) {
+        const [key, value] = cookie.split("=");
+        if (key === name) {
+          return value;
+        }
+      }
+      return null;
+    }
+
     function switchLanguage(lang) {
+      setCookie("language", lang, 30); // Save language preference for 30 days
       document.getElementById("title").innerText = translations[lang].title;
       document.getElementById("subtitle").innerText = translations[lang].subtitle;
       const chapterContainer = document.getElementById("chapters");
@@ -253,7 +271,17 @@
       `).join("");
     }
 
-    switchLanguage('en');
+    document.addEventListener("DOMContentLoaded", function () {
+      const savedLang = getCookie("language") || "en"; // Default to English if no cookie is found
+      switchLanguage(savedLang);
+    });
+    
+  </script>
+
+  <script>
+    // Default language on load
+    if(getCookie("language") == null)
+      switchLanguage('en');
   </script>
 
 </body>
