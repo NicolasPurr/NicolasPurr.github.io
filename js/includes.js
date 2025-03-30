@@ -30,12 +30,11 @@ function updatePageTitle() {
 
 document.addEventListener("DOMContentLoaded", function () {
   loadPartial('header', 'partials/header.html', function () {
-        updatePageTitle();
         applyDynamicHeaderStyle(); 
+        updatePageTitle();
         applySavedLanguage(); // Ensure language is applied after loading
   });
   loadPartial('footer', 'partials/footer.html', function () {
-        updatePageTitle();
         applySavedLanguage(); // Apply language after the footer loads too
   });
 });
