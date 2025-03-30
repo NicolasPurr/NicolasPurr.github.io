@@ -94,28 +94,35 @@
       </ul>
     </article>
 
-    <!-- Example of a pulsating image with three animated dots on top -->
+    <!-- PTS image with three animated dots on top -->
     <section class="bg-white p-4 rounded shadow-md">
-      <h2 class="text-xl font-semibold mb-2" data-lang data-en="Potential Points of Contact (PoCs)" data-pl="Potencjalne punkty kontaktu 
-        (PoCs)"></h2>
-      <div class="relative inline-block">
-        <!-- Larger image with lower z-index -->
-        <img src="assets/shot.jpg" alt="Example Image" class="relative z-10 w-128 h-auto rounded">
-        <!-- Top dot with higher z-index -->
-        <div class="absolute left-1/2 top-4 transform translate-x-3 translate-y-6 z-20">
-          <div class="w-8 h-8 bg-blue-400 rounded-full opacity-75 animate-ping"></div>
+      <h2 class="text-xl font-semibold mb-2" data-lang 
+          data-en="Potential Points of Contact (PoCs)" 
+          data-pl="Potencjalne punkty kontaktu (PoCs)">
+      </h2>
+    
+      <div class="relative w-full max-w-lg mx-auto">
+        <!-- Image scales responsively -->
+        <img src="assets/shot.jpg" alt="Example Image" class="w-full h-auto rounded">
+        
+        <!-- Top dot -->
+        <div class="absolute top-[10%] left-[50%] transform -translate-x-1/2 -translate-y-1/2">
+          <div class="w-6 h-6 md:w-8 md:h-8 bg-blue-400 rounded-full opacity-75 animate-ping"></div>
         </div>
-        <!-- Top dot with higher z-index -->
-        <div class="absolute left-1/2 top-4 transform translate-x-8 translate-y-20 z-20">
-          <div class="w-8 h-8 bg-blue-400 rounded-full opacity-75 animate-ping"></div>
+        
+        <!-- Slightly lower dot -->
+        <div class="absolute top-[30%] left-[60%] transform -translate-x-1/2 -translate-y-1/2">
+          <div class="w-6 h-6 md:w-8 md:h-8 bg-blue-400 rounded-full opacity-75 animate-ping"></div>
         </div>
-        <!-- Center dot with higher z-index -->
-        <div class="absolute left-1/2 top-1/2 transform -translate-x-2 -translate-y-14 z-20">
-          <div class="w-16 h-16 bg-purple-400 rounded-full opacity-75 animate-ping"></div>
+        
+        <!-- Center dot -->
+        <div class="absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2">
+          <div class="w-10 h-10 md:w-16 md:h-16 bg-purple-400 rounded-full opacity-75 animate-ping"></div>
         </div>
-        <!-- Bottom dot with higher z-index -->
-        <div class="absolute left-1/2 bottom-4 transform -translate-x-10 -translate-y-11 z-20">
-          <div class="w-8 h-8 bg-red-400 rounded-full opacity-75 animate-ping"></div>
+        
+        <!-- Bottom dot -->
+        <div class="absolute bottom-[10%] left-[40%] transform -translate-x-1/2 translate-y-1/2">
+          <div class="w-6 h-6 md:w-8 md:h-8 bg-red-400 rounded-full opacity-75 animate-ping"></div>
         </div>
       </div>
     </section>
