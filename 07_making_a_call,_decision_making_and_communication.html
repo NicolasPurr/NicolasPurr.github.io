@@ -3,60 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2.7 MAKING A CALL, DECISION MAKING AND COMMUNICATION - FIBA Referees Manual</title>
+
+  <!-- Include scripts -->
   <script src="https://cdn.tailwindcss.com"></script>
-  
-  <script>
-    function setCookie(name, value, days) {
-      let expires = "";
-      if (days) {
-        const date = new Date();
-        date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
-        expires = "; expires=" + date.toUTCString();
-      }
-      document.cookie = name + "=" + value + "; path=/" + expires;
-    }
-
-    function getCookie(name) {
-      const cookies = document.cookie.split("; ");
-      for (let cookie of cookies) {
-        const [key, value] = cookie.split("=");
-        if (key === name) return value;
-      }
-      return null;
-    }
-
-    function switchLanguage(lang) {
-      document.querySelectorAll("[data-lang]").forEach(el => {
-        el.innerHTML = el.getAttribute(`data-${lang}`);
-      });
-      setCookie("language", lang, 30); // Save language for 30 days
-    }
-
-    // On page load, apply saved language or default to English
-    document.addEventListener("DOMContentLoaded", () => {
-      const savedLang = getCookie("language") || "en"; 
-      switchLanguage(savedLang);
-    });
-  </script>
+  <script src="js/common.js" defer></script>
+  <script src="js/includes.js" defer></script>
 
 </head>
 
+<body class="bg-gray-100">
 
-
-<body class="bg-gray-100 text-gray-800">
-  <header class="bg-gray-600 text-gray-800 py-4 shadow-lg">
-    <div class="container mx-auto px-4 flex justify-between items-center">
-      <div>
-        <h1 class="text-3xl font-bold text-white">2.7 MAKING A CALL, DECISION MAKING, AND COMMUNICATION</h1>
-        <p class="text-lg text-amber-500"><a href="index.html">FIBA Referees Manual - Individual Officiating Techniques</a></p>
-      </div>
-      <div>
-        <button onclick="switchLanguage('en')" class="bg-amber-500 text-white px-4 py-2 rounded mr-2">EN</button>
-        <button onclick="switchLanguage('pl')" class="bg-amber-500 text-white px-4 py-2 rounded">PL</button>
-      </div>
-    </div>
-  </header>
+  <!-- Header placeholder -->
+  <div id="header"></div>
 
   <main class="container mx-auto px-4 py-6 space-y-6">
 
@@ -66,16 +24,8 @@
 
   </main>
 
-  <footer class="bg-gray-800 text-gray-300 py-4">
-    <div class="container mx-auto px-4 text-center">
-      <p>&copy; <a class="underline" href="https://refereeing.fiba.basketball/fr/documents/category/manuals-for-fiba-referees">
-        2024 FIBA Referees Manual</a> | Designed with Tailwind CSS</p>
-    </div>
-  </footer>
+  <!-- Footer placeholder -->
+  <div id="footer"></div>
 
-  <script>
-    // Default language on load
-    switchLanguage('en');
-  </script>
 </body>
 </html>
