@@ -1,3 +1,4 @@
+// /js/include.js
 function loadPartial(elementId, file, callback) {
   fetch(file)
       .then(response => response.text())
@@ -8,11 +9,14 @@ function loadPartial(elementId, file, callback) {
       .catch(err => console.error('Error loading partial:', err));
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-  loadPartial('header', 'partials/header.html', function() {
-      applyDynamicHeaderStyle(); // Apply styles only after the header is loaded
+document.addEventListener("DOMContentLoaded", function () {
+  loadPartial('header', 'partials/header.html', function () {
+      applyDynamicHeaderStyle(); 
+      applySavedLanguage(); // Ensure language is applied after loading
   });
-  loadPartial('footer', 'partials/footer.html');
+  loadPartial('footer', 'partials/footer.html', function () {
+      applySavedLanguage(); // Apply language after the footer loads too
+  });
 });
 
 function setHeaderStyle(bgColor, textColor, btnBgColor) {
