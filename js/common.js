@@ -24,4 +24,10 @@ function setCookie(name, value, days) {
     });
     setCookie("language", lang, 30); // Save language for 30 days
   }
+
+  // On page load, apply saved language or default to English
+  document.addEventListener("DOMContentLoaded", () => {
+    const savedLang = getCookie("language") || "en"; 
+    switchLanguage(savedLang);
+  });
   
