@@ -5,20 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>2.2 DISTANCE & STATIONARY - FIBA Referees Manual</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function switchLanguage(lang) {
+      document.querySelectorAll("[data-lang]").forEach(el => {
+        el.innerHTML = el.getAttribute(`data-${lang}`);
+      });
+    }
+  </script>
 </head>
 <body class="bg-gray-100 text-gray-800">
+  
   <header class="bg-amber-500 text-gray-800 py-4 shadow-lg">
-    <div class="absolute right-4 flex space-x-4">
-      <button onclick="switchLanguage('en')" class="text-white hover:text-amber-500">🇬🇧 EN</button>
-      <button onclick="switchLanguage('pl')" class="text-white hover:text-amber-500">🇵🇱 PL</button>
-    </div>    
+    
     <div class="container mx-auto px-4">
       <h1 class="text-3xl font-bold text-white">2.2 DISTANCE & STATIONARY</h1>
       <p class="text-lg text-gray-800"><a href="index.html">FIBA Referees Manual - Chapter 2: IOT</a></p>
     </div>
+
+    <div>
+      <button onclick="switchLanguage('en')" class="bg-gray-100 text-white px-4 py-2 rounded mr-2">EN</button>
+      <button onclick="switchLanguage('pl')" class="bg-gray-100 text-white px-4 py-2 rounded">PL</button>
+    </div>
+  
   </header>
 
   <main class="container mx-auto px-4 py-6 space-y-6">
+    
     <article class="bg-gray-600 p-4 rounded shadow-md">
       <p class="text-white">
         This chapter explains the importance of maintaining the right distance from the play and remaining stationary. Many referees think that moving constantly helps decision-making. However, maintaining a distance of 3-6 meters allows you to see the play at a manageable speed.
@@ -35,6 +47,7 @@
     <div class="text-center">
       <a href="index.html" class="text-blue-500 underline">&larr; Back to Overview</a>
     </div>
+
   </main>
 
   <footer class="bg-gray-800 text-gray-300 py-4">
@@ -42,5 +55,6 @@
       <p>&copy; 2025 FIBA Referees Manual</p>
     </div>
   </footer>
+
 </body>
 </html>

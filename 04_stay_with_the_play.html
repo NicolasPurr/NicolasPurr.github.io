@@ -3,15 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2.4 STAY WITH THE PLAY - FIBA Referees Manual</title>
+  <title>2.2 DISTANCE & STATIONARY - FIBA Referees Manual</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function switchLanguage(lang) {
+      document.querySelectorAll("[data-lang]").forEach(el => {
+        el.innerHTML = el.getAttribute(`data-${lang}`);
+      });
+    }
+  </script>
 </head>
 <body class="bg-gray-100 text-gray-800">
-  <header class="bg-red-50 text-gray-800 py-4 shadow-lg">
+  
+  <header class="bg-amber-500 text-gray-800 py-4 shadow-lg">
+    
     <div class="container mx-auto px-4">
-      <h1 class="text-3xl font-bold">2.4 STAY WITH THE PLAY</h1>
-      <p class="text-lg">Detailed Guide</p>
+      <h1 class="text-3xl font-bold text-white">2.4 STAY WITH THE PLAY</h1>
+      <p class="text-lg text-gray-800"><a href="index.html">FIBA Referees Manual - Chapter 2: IOT</a></p>
     </div>
+
+    <div>
+      <button onclick="switchLanguage('en')" class="bg-gray-100 text-white px-4 py-2 rounded mr-2">EN</button>
+      <button onclick="switchLanguage('pl')" class="bg-gray-100 text-white px-4 py-2 rounded">PL</button>
+    </div>
+  
   </header>
 
   <main class="container mx-auto px-4 py-6 space-y-6">

@@ -5,20 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>2.1 INTRODUCTION - FIBA Referees Manual</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function switchLanguage(lang) {
+      document.querySelectorAll("[data-lang]").forEach(el => {
+        el.innerHTML = el.getAttribute(`data-${lang}`);
+      });
+    }
+  </script>
 </head>
 <body class="bg-gray-100 text-gray-800">
-  <header class="bg-sky-500 text-white py-4 shadow-lg">
-    <div class="container mx-auto px-4">
-      <!-- Go Back Arrow -->
-    <a href="index.html" class="absolute right-4 flex items-center text-white hover:text-amber-500">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-      </svg>
-      <span class="text-lg font-medium">Back</span>
-    </a>
-
-      <h1 class="text-3xl font-bold">2.9 JUMP BALL / ACTIVE REFEREE</h1>
-      <p class="text-lg">FIBA Referees Manual - Detailed Chapter</p>
+  <header class="bg-gray-600 text-gray-800 py-4 shadow-lg">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <div>
+        <h1 class="text-3xl font-bold text-white">2.9 JUMP BALL - ACTIVE REFEREE</h1>
+        <p class="text-lg text-amber-500"><a href="index.html">FIBA Referees Manual - Chapter 2: IOT</a></p>
+      </div>
+      <div>
+        <button onclick="switchLanguage('en')" class="bg-amber-500 text-white px-4 py-2 rounded mr-2">EN</button>
+        <button onclick="switchLanguage('pl')" class="bg-amber-500 text-white px-4 py-2 rounded">PL</button>
+      </div>
     </div>
   </header>
 
