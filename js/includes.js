@@ -32,4 +32,10 @@ function setHeaderStyle(bgColor, textColor, btnBgColor) {
     });
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+  includeHTML(function() {
+      setHeaderStyle("bg-gray-600", "text-amber-500", "bg-gray-600");
+  });
+});
+
   
