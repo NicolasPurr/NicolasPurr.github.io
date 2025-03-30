@@ -46,13 +46,13 @@ function applyDynamicHeaderStyle() {
       const number = parseInt(match[1], 10); // Convert to integer
       if (number % 2 === 0) {
           // Even-numbered file
-          setHeaderStyle("bg-gray-600", "text-amber-500", "bg-gray-600");
+          setHeaderStyle("bg-amber-500", "text-gray-800", "bg-gray-600");
       } else {
           // Odd-numbered file
-          setHeaderStyle("bg-amber-600", "text-gray-900", "bg-gray-800");
+          setHeaderStyle("bg-gray-600", "text-amber-500", "bg-amber-500");
       }
   } else {
       // Default style if filename doesn't match expected pattern
-      setHeaderStyle("bg-gray-600", "text-amber-500", "bg-gray-600");
+      setHeaderStyle("bg-gray-600", "text-amber-500", "bg-amber-500");
   }
 }
