@@ -3,56 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2.2 DISTANCE & STATIONARY - FIBA Referees Manual</title>
+  <title>2.6 PRE-GAME CONFERENCE AND USE OF FIBA IREF PG APP - FIBA Referees Manual</title>
   <script src="https://cdn.tailwindcss.com"></script>
+
   <script>
+    function setCookie(name, value, days) {
+      let expires = "";
+      if (days) {
+        const date = new Date();
+        date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+        expires = "; expires=" + date.toUTCString();
+      }
+      document.cookie = name + "=" + value + "; path=/" + expires;
+    }
+
+    function getCookie(name) {
+      const cookies = document.cookie.split("; ");
+      for (let cookie of cookies) {
+        const [key, value] = cookie.split("=");
+        if (key === name) return value;
+      }
+      return null;
+    }
+
     function switchLanguage(lang) {
       document.querySelectorAll("[data-lang]").forEach(el => {
         el.innerHTML = el.getAttribute(`data-${lang}`);
       });
+      setCookie("language", lang, 30); // Save language for 30 days
     }
-  </script>
-</head>
-<body class="bg-gray-100 text-gray-800">
-  
-  <header class="bg-amber-500 text-gray-800 py-4 shadow-lg">
-    
-    <div class="container mx-auto px-4">
-      <h1 class="text-3xl font-bold text-white">2.6 PRE-GAME CONFERENCE</h1>
-      <p class="text-lg text-gray-800"><a href="index.html">FIBA Referees Manual - Chapter 2: IOT</a></p>
-    </div>
 
-    <div>
-      <button onclick="switchLanguage('en')" class="bg-gray-100 text-white px-4 py-2 rounded mr-2">EN</button>
-      <button onclick="switchLanguage('pl')" class="bg-gray-100 text-white px-4 py-2 rounded">PL</button>
-    </div>
+    // On page load, apply saved language or default to English
+    document.addEventListener("DOMContentLoaded", () => {
+      const savedLang = getCookie("language") || "en"; 
+      switchLanguage(savedLang);
+    });
+  </script>
   
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+  <header class="bg-amber-500 text-gray-800 py-4 shadow-lg">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <div>
+        <h1 class="text-3xl font-bold text-white">2.6 PRE-GAME CONFERENCE AND USE OF FIBA IREF PG APP</h1>
+        <p class="text-lg text-gray-600"><a href="index.html">FIBA Referees Manual - Chapter 2: IOT</a></p>
+      </div>
+      <div>
+        <button onclick="switchLanguage('en')" class="bg-gray-600 text-white px-4 py-2 rounded mr-2">EN</button>
+        <button onclick="switchLanguage('pl')" class="bg-gray-600 text-white px-4 py-2 rounded">PL</button>
+      </div>
+    </div>
   </header>
 
   <main class="container mx-auto px-4 py-6 space-y-6">
-    <article class="bg-purple-100 p-4 rounded shadow-md">
-      <p>
-        A pre-game conference is essential for ensuring that all referees are aligned before the match. Key topics include areas of responsibility, positioning, and the use of the FIBA iRef Pre-Game App.
-      </p>
-      <ul class="list-decimal pl-6 mt-2">
-        <li>Know your areas of responsibility on the floor.</li>
-        <li>Establish eye contact for double calls.</li>
-        <li>Discuss help on out-of-bounds situations.</li>
-      </ul>
-      <p class="mt-4">
-        Download the FIBA iRef Pre-Game App from the <a href="https://apps.apple.com/us/app/fiba-iref-pre-game/id1101640666" class="text-blue-500 underline" target="_blank">Apple App Store</a> or <a href="https://play.google.com/store/apps/details?id=com.fiba.iRefPGC&hl=en-US" class="text-blue-500 underline" target="_blank">Google Play Store</a>.
-      </p>
-    </article>
 
-    <div class="text-center">
-      <a href="index.html" class="text-blue-500 underline">&larr; Back to Overview</a>
-    </div>
   </main>
 
   <footer class="bg-gray-800 text-gray-300 py-4">
     <div class="container mx-auto px-4 text-center">
-      <p>&copy; 2025 FIBA Referees Manual</p>
+      <p>&copy; <a class="underline" href="https://refereeing.fiba.basketball/fr/documents/category/manuals-for-fiba-referees">
+        2024 FIBA Referees Manual</a> | Designed with Tailwind CSS</p>
     </div>
   </footer>
+
 </body>
 </html>

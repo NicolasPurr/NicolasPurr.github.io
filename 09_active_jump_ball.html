@@ -3,21 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2.1 INTRODUCTION - FIBA Referees Manual</title>
+  <title>2.9 JUMP BALL / ACTIVE REFEREE (TOSSING THE BALL) - FIBA Referees Manual</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  
   <script>
+    function setCookie(name, value, days) {
+      let expires = "";
+      if (days) {
+        const date = new Date();
+        date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+        expires = "; expires=" + date.toUTCString();
+      }
+      document.cookie = name + "=" + value + "; path=/" + expires;
+    }
+
+    function getCookie(name) {
+      const cookies = document.cookie.split("; ");
+      for (let cookie of cookies) {
+        const [key, value] = cookie.split("=");
+        if (key === name) return value;
+      }
+      return null;
+    }
+
     function switchLanguage(lang) {
       document.querySelectorAll("[data-lang]").forEach(el => {
         el.innerHTML = el.getAttribute(`data-${lang}`);
       });
+      setCookie("language", lang, 30); // Save language for 30 days
     }
+
+    // On page load, apply saved language or default to English
+    document.addEventListener("DOMContentLoaded", () => {
+      const savedLang = getCookie("language") || "en"; 
+      switchLanguage(savedLang);
+    });
   </script>
+
+  <style>
+    .list-alpha {
+      list-style-type: lower-alpha;
+    }
+  </style>
+  
 </head>
+
+
+
 <body class="bg-gray-100 text-gray-800">
   <header class="bg-gray-600 text-gray-800 py-4 shadow-lg">
     <div class="container mx-auto px-4 flex justify-between items-center">
       <div>
-        <h1 class="text-3xl font-bold text-white">2.9 JUMP BALL - ACTIVE REFEREE</h1>
+        <h1 class="text-3xl font-bold text-white">2.9 JUMP BALL / ACTIVE REFEREE (TOSSING THE BALL)</h1>
         <p class="text-lg text-amber-500"><a href="index.html">FIBA Referees Manual - Chapter 2: IOT</a></p>
       </div>
       <div>
@@ -28,30 +65,23 @@
   </header>
 
   <main class="container mx-auto px-4 py-6 space-y-6">
-    <article class="bg-green-100 p-4 rounded shadow-md">
-      <p>
-        Jump-ball situations are exciting, but unfortunately sometimes the administrating referee is unable to toss the ball properly.
-        Analysis indicates that 50% of the violations during the jump-ball are caused by a poor toss by the referee. 
-        In other words, they could have been avoided. Tossing the ball is something that needs to be trained on a regular basis, 
-        unlike what is currently the case. It is crucial to understand that the jumpers are tense and will react easily on any 
-        movement caused by the referee. So therefore it is crucial to avoid any unnecessary movements.  
-      </p>
-      <p class="mt-4">
-        A checklist for a successful ball toss:
-      </p>
-      <ul class="list-disc pl-6 mt-2">
-        <li>
-          <strong>Players are tense - avoid any extra movements 
-        </li>
-      </ul>
-      <p class="mt-4">
-        The failure to adhere to these principles is the primary reason for many incorrect decisions on the floor. Consistently maintaining proper coverage improves the overall quality of officiating.
-      </p>
+
+    <article class="bg-amber-500 p-4 rounded shadow-md text-white">
+      
     </article>
 
-    <div class="text-center">
-      <a href="index.html" class="text-blue-500 underline">&larr; Back to Overview</a>
-    </div>
   </main>
 
-s.
+  <footer class="bg-gray-800 text-gray-300 py-4">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; <a class="underline" href="https://refereeing.fiba.basketball/fr/documents/category/manuals-for-fiba-referees">
+        2024 FIBA Referees Manual</a> | Designed with Tailwind CSS</p>
+    </div>
+  </footer>
+
+  <script>
+    // Default language on load
+    switchLanguage('en');
+  </script>
+</body>
+</html>
