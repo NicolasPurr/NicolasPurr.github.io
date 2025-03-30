@@ -5,44 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>2.2 DISTANCE & STATIONARY - FIBA Referees Manual</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  
   <script>
     function setCookie(name, value, days) {
-    let expires = "";
-    if (days) {
-      const date = new Date();
-      date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
-      expires = "; expires=" + date.toUTCString();
+      let expires = "";
+      if (days) {
+        const date = new Date();
+        date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+        expires = "; expires=" + date.toUTCString();
+      }
+      document.cookie = name + "=" + value + "; path=/" + expires;
     }
-    document.cookie = name + "=" + value + "; path=/" + expires;
-  }
 
-  function getCookie(name) {
-    const cookies = document.cookie.split("; ");
-    for (let cookie of cookies) {
-      const [key, value] = cookie.split("=");
-      if (key === name) return value;
+    function getCookie(name) {
+      const cookies = document.cookie.split("; ");
+      for (let cookie of cookies) {
+        const [key, value] = cookie.split("=");
+        if (key === name) return value;
+      }
+      return null;
     }
-    return null;
-  }
 
-  function switchLanguage(lang) {
-    document.querySelectorAll("[data-lang]").forEach(el => {
-      el.innerHTML = el.getAttribute(`data-${lang}`);
+    function switchLanguage(lang) {
+      document.querySelectorAll("[data-lang]").forEach(el => {
+        el.innerHTML = el.getAttribute(`data-${lang}`);
+      });
+      setCookie("language", lang, 30); // Save language for 30 days
+    }
+
+    // On page load, apply saved language or default to English
+    document.addEventListener("DOMContentLoaded", () => {
+      const savedLang = getCookie("language") || "en"; 
+      switchLanguage(savedLang);
     });
-    setCookie("language", lang, 30); // Save language for 30 days
-  }
-
-  // On page load, apply saved language or default to English
-  document.addEventListener("DOMContentLoaded", () => {
-    const savedLang = getCookie("language") || "en"; 
-    switchLanguage(savedLang);
-  });
   </script>
+
   <style>
     .list-alpha {
       list-style-type: lower-alpha;
     }
   </style>
+
 </head>
 
 <body class="bg-gray-100 text-gray-800">
@@ -163,8 +166,8 @@
 
   <footer class="bg-gray-800 text-gray-300 py-4">
     <div class="container mx-auto px-4 text-center">
-      <p>&copy; <a href="https://refereeing.fiba.basketball/fr/documents/category/manuals-for-fiba-referees"
-        2024 FIBA Referees Manual></a> | Designed with Tailwind CSS</p>
+      <p>&copy; <a class="text-underline" href="https://refereeing.fiba.basketball/fr/documents/category/manuals-for-fiba-referees">
+        2024 FIBA Referees Manual</a> | Designed with Tailwind CSS</p>
     </div>
   </footer>
 
