@@ -182,7 +182,8 @@
 
   <script>
     // Default language on load
-    switchLanguage('en');
+    if(getCookie("language") == null)
+      switchLanguage('en');
   </script>
 </body>
 </html>
