@@ -154,23 +154,23 @@ function getCookie(name) {
 }
 
 function switchLanguage(lang) {
-setCookie("language", lang, 30); // Save language preference for 30 days
-document.getElementById("title").innerText = translations[lang].title;
-document.getElementById("subtitle").innerText = translations[lang].subtitle;
+  setCookie("language", lang, 30); // Save language preference for 30 days
+  document.getElementById("title").innerText = translations[lang].title;
+  document.getElementById("subtitle").innerText = translations[lang].subtitle;
 
-const chapterContainer = document.getElementById("chapters");
-chapterContainer.classList.add("px-3", "md:px-6");
+  const chapterContainer = document.getElementById("chapters");
+  chapterContainer.classList.add("px-3", "md:px-6");
 
-chapterContainer.innerHTML = translations[lang].chapters.map((ch, i) => `
-  <a href="${ch.link}" class="flex items-center justify-between w-full bg-amber-500 text-white text-left px-4 py-4 rounded-lg 
-    shadow-md transition duration-300 transform group hover:scale-105 hover:bg-amber-600">
-    <div>
-      <h2 class="text-xl font-semibold">${ch.title}</h2>
-      <p class="text-sm opacity-80">${ch.desc}</p>
-    </div>
-    <img src="assets/basketball.png" alt="Chapter Image" class="w-16 h-16 invert transition duration-300 group-hover:rotate-45">
-  </a>
-`).join("");
+  chapterContainer.innerHTML = translations[lang].chapters.map((ch, i) => `
+    <a href="${ch.link}" class="flex items-center justify-between w-full bg-amber-500 text-white text-left px-4 py-4 rounded-lg 
+      shadow-md transition duration-300 transform group hover:scale-105 hover:bg-amber-600">
+      <div>
+        <h2 class="text-xl font-semibold">${ch.title}</h2>
+        <p class="text-sm opacity-80">${ch.desc}</p>
+      </div>
+      <img src="assets/basketball.png" alt="Chapter Image" class="w-16 h-16 invert transition duration-300 group-hover:rotate-45">
+    </a>
+  `).join("");
 }
   
 document.addEventListener("DOMContentLoaded", function () {
