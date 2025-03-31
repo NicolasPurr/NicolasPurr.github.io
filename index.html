@@ -217,22 +217,26 @@
     }
 
     function switchLanguage(lang) {
-      setCookie("language", lang, 30); // Save language preference for 30 days
-      document.getElementById("title").innerText = translations[lang].title;
-      document.getElementById("subtitle").innerText = translations[lang].subtitle;
-      const chapterContainer = document.getElementById("chapters");
-      chapterContainer.innerHTML = translations[lang].chapters.map((ch, i) => `
-        <section class="${i % 2 === 0 ? 'bg-amber-500' : 'bg-gray-600'} p-4 rounded shadow-md">
-          <h2 class="text-2xl font-semibold mb-2 text-white"><a href="${ch.link}" class="text-white underline">${ch.title}</a></h2>
-          <p class="${i % 2 !== 0 ? 'text-white' : ''}">${ch.desc}</p>
-        </section>
-      `).join("");
-    }
+    setCookie("language", lang, 30); // Save language preference for 30 days
+    document.getElementById("title").innerText = translations[lang].title;
+    document.getElementById("subtitle").innerText = translations[lang].subtitle;
 
-    document.addEventListener("DOMContentLoaded", function () {
-      const savedLang = getCookie("language") || "en"; // Default to English if no cookie is found
-      switchLanguage(savedLang);
-    });
+    const chapterContainer = document.getElementById("chapters");
+    chapterContainer.innerHTML = translations[lang].chapters.map((ch, i) => `
+      <a href="${ch.link}" class="flex items-center justify-between w-full bg-amber-500 text-white text-left px-4 py-4 rounded-lg shadow-md transition duration-300 transform hover:scale-105 hover:bg-amber-600">
+        <div>
+          <h2 class="text-xl font-semibold">${ch.title}</h2>
+          <p class="text-sm opacity-80">${ch.desc}</p>
+        </div>
+        <img src="assets/chapter-${i + 1}.jpg" alt="Chapter Image" class="w-16 h-16 object-cover rounded-lg shadow-md">
+      </a>
+    `).join("");
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const savedLang = getCookie("language") || "en";
+    switchLanguage(savedLang);
+  });
     
   </script>
 
