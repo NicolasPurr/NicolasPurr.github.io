@@ -124,10 +124,10 @@
         <div class="flex flex-row justify-center mt-4 gap-x-4">
 
           <!-- FIRST COL -->
-          <div class="flex flex-col justify-center bg-white p-8 rounded-2xl shadow-lg max-w-4xl w-full">
+          <div class="flex flex-col bg-white p-8 rounded-2xl shadow-lg max-w-4xl w-full">
 
             <!-- TITLE -->
-            <div class="flex-1 justify-left">
+            <div class="flex-1 self-center">
 
               <p class="mt-4 text-xl font-bold" data-lang data-en="Foul with throw-in" data-pl=""></p>
 
@@ -141,9 +141,10 @@
             </div>
 
             <!-- TEXT -->
-            <div class="flex flex-row">
+            <div class="flex flex-row mt-4 gap-x-4">
 
-              <div class="flex-1 justify-right">
+              <!-- LEFT TEXT COLUMN (Pushes Right) -->
+              <div class="flex-1 text-left flex justify-end">
 
                 <ol class="list-decimal">
                   <li data-lang data-en="Number" data-pl="Numer"></li>
@@ -151,9 +152,10 @@
                   <li class="mt-2" data-lang data-en="Penalty" data-pl=""></li>
                 </ol>
 
-              </div>
+              </div><!-- LEFT TEXT COLUMN (Pushes Right) -->
 
-              <div class="flex-1 justify-left">
+              <!-- RIGHT TEXT COLUMN (Pushes Right) -->
+              <div class="v">
 
                 <p
                   data-lang data-en="- No. 6"
@@ -169,17 +171,16 @@
                   data-lang data-en="- Throw-in direction"
                   data-pl=""
                 ></p>
-              </div>
 
-            </div>
-
+              </div><!-- RIGHT TEXT COLUMN (Pushes Right) -->
+            </div><!-- TEXT -->
           </div><!-- FIRST COL -->
 
           <!-- SECOND COL -->
           <div class="flex flex-col bg-white p-8 rounded-2xl shadow-lg max-w-4xl w-full">
             
             <!-- TITLE (Left-Aligned) -->
-            <div class="self-start">
+            <div class="self-center">
               <p class="text-xl font-bold mt-4" data-lang data-en="Foul with free throws" data-pl="Faul w akcji rzutowej"></p>
             </div>
 
@@ -189,7 +190,7 @@
             </div>
 
             <!-- TEXT SECTION -->
-            <div class="flex flex-row mt-4">
+            <div class="flex flex-row mt-4 gap-x-4">
 
               <!-- LEFT TEXT COLUMN (Pushes Right) -->
               <div class="flex-1 text-left flex justify-end">
@@ -198,7 +199,7 @@
                   <li class="mt-2" data-lang data-en="Nature of foul" data-pl=""></li>
                   <li class="mt-2" data-lang data-en="Penalty" data-pl=""></li>
                 </ol>
-              </div>
+              </div><!-- LEFT TEXT COLUMN (Pushes Right) -->
 
               <!-- RIGHT TEXT COLUMN (Pushes Left) -->
               <div class="flex-1 text-left flex justify-start">
@@ -207,7 +208,7 @@
                   <p class="mt-2" data-lang data-en="- Illegal contact to hand"></p>
                   <p class="mt-2" data-lang data-en="- 2 free throws"></p>
                 </div>
-              </div>
+              </div><!-- RIGHT TEXT COLUMN (Pushes Left) -->
 
             </div>
 
