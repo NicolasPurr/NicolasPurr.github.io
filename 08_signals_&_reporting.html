@@ -176,48 +176,41 @@
           </div><!-- FIRST COL -->
 
           <!-- SECOND COL -->
-          <div class="flex flex-col justify-center bg-white p-8 rounded-2xl shadow-lg max-w-4xl w-full">
+          <div class="flex flex-col bg-white p-8 rounded-2xl shadow-lg max-w-4xl w-full">
+            
+            <!-- TITLE (Left-Aligned) -->
+            <div class="self-start">
+              <p class="text-xl font-bold mt-4" data-lang data-en="Foul with free throws" data-pl="Faul w akcji rzutowej"></p>
+            </div>
 
-            <!-- TITLE -->
-            <div class="flex-1 justify-left">
-              <p class="mt-4 text-xl font-bold" data-lang data-en="Foul with free throws" data-pl="Faul w akcji rzutowej"></p>
-            </div><!-- TITLE -->
+            <!-- IMAGE (Centered) -->
+            <div class="flex justify-center">
+              <img class="rounded-xl object-cover" src="assets/reporting_shots.png">
+            </div>
 
-            <!-- IMAGE -->
-            <div class="flex-1 justify-center"><img class="rounded-xl object-cover" src="assets/reporting_shots.png"></div>
+            <!-- TEXT SECTION -->
+            <div class="flex flex-row mt-4">
 
-            <!-- TEXT -->
-            <div class="flex-1 flex flex-row">
-
-              <div class="flex-1 justify-right">
-
+              <!-- LEFT TEXT COLUMN (Pushes Right) -->
+              <div class="flex-1 text-left flex justify-end">
                 <ol class="list-decimal">
                   <li data-lang data-en="Number" data-pl="Numer"></li>
                   <li class="mt-2" data-lang data-en="Nature of foul" data-pl=""></li>
                   <li class="mt-2" data-lang data-en="Penalty" data-pl=""></li>
                 </ol>
-
               </div>
 
-              <div class="flex-1 justify-left">
-
-                <p
-                  data-lang data-en="- No. 6"
-                  data-pl=""
-                ></p>
-
-                <p class="mt-2"
-                  data-lang data-en="- Illegal contact to hand"
-                  data-pl=""
-                ></p>
-
-                <p class="mt-2"
-                  data-lang data-en="- 2 free throws"
-                  data-pl=""
-                ></p>
+              <!-- RIGHT TEXT COLUMN (Pushes Left) -->
+              <div class="flex-1 text-left flex justify-start">
+                <div>
+                  <p data-lang data-en="- No. 6"></p>
+                  <p class="mt-2" data-lang data-en="- Illegal contact to hand"></p>
+                  <p class="mt-2" data-lang data-en="- 2 free throws"></p>
+                </div>
               </div>
 
-            </div><!-- TEXT -->
+            </div>
+
           </div><!-- SECOND COL -->
         </div><!-- FIRST BLOCK -->
 
