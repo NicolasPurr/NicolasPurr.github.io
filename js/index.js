@@ -74,7 +74,7 @@ const translations = {
     subtitle: "Rozdział 2: Indywidualne Techniki Sędziowania",
     chapters: [
       { title: "2.1 WPROWADZENIE",
-      desc: "Ocena oczywistych zagrań w podstawowym obszarze odpowiedzialności.", 
+      desc: "Ocena oczywistych zagrań w podstawowej strefie odpowiedzialności.", 
       link: "01_introduction.html" },
 
       { title: "2.2 DYSTANS I STATYCZNA POZYCJA",
@@ -108,7 +108,7 @@ const translations = {
       link: "08_signals_&_reporting.html" },
       
       { title: "2.9 RZUT SĘDZIOWSKI - SĘDZIA AKTYWNY",
-      desc: "Etapy i techniki wykonania rzutu sędziowskiego.",
+      desc: "Etapy i techniki wykonywania rzutu sędziowskiego.",
       link: "09_jump_ball_-_active_referee_(tossing_the_ball).html" },
 
       { title: "2.10 RZUT SĘDZIOWSKI - SĘDZIOWIE PASYWNI",
@@ -123,13 +123,13 @@ const translations = {
       desc: "Administrowanie i identyfikacja standardowych etapów wprowadzenia piłki.",
       link: "12_throw-in_administration.html" },
       
-      { title: "2.13 UDAWANIE FAULU (FLOP)",
+      { title: "2.13 UDAWANIE FAULU",
       desc: "Identyfikacja i reakcja na udawanie faulu.",
       link: "13_fake_a_foul.html" },
       
       { title: "2.14 KONTROLA ZEGARÓW",
-      desc: "Techniki kontroli zegara czasu gry i czasu akcji.\n" +
-      "Identyfikacja sytuacji, w których najczęściej zdarzają się błędy.\n" +
+      desc: "Techniki kontroli zegara czasu gry i czasu akcji." +
+      "Identyfikacja sytuacji, w których najczęściej zdarzają się błędy." +
       "Procedura korekty czasu gry i czasu akcji.",
       link: "14_control_of_the_game_and_shot_clock.html" },
     ]
