@@ -6,76 +6,423 @@
 
   <!-- Include scripts -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="js/common.js" defer></script>
+  <script src="js/common.js"></script>
   <script src="js/includes.js" defer></script>
+
+  <!-- Alphabetical lists (capital letters) -->
+  <style>
+    .list-upper-alpha {
+      list-style-type: upper-alpha;
+    }
+  </style>
 
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-gray-100" data-static-url="">
 
   <!-- Header placeholder -->
   <div id="header"></div>
 
   <main class="container mx-auto px-4 py-6 space-y-6">
-    <article class="bg-gray-600 p-4 rounded shadow-md text-white">
 
-      <table class="table-auto w-full border border-gray-300 text-left text-sm">
+    <article>
+    <section class="bg-gray-600 p-4 rounded shadow-md text-white">
+
+      <p class="" data-lang
+        data-en="The control of the game & shot clock by referees has become a standard routine nowadays. Five years ago it was 
+        practically inexistent or at the least very rare. It has been previously questioned as to how a referee is able to 
+        control the clocks almost all the time and still focus fully on play situations. The secret is in the correct technique 
+        and appropriate timing. This combined with thousands of repetitive actions (practise) will ensure it becomes automatic skill 
+        (developed and maintained in your muscle memory). The basic element being that game clock will be controlled every 
+        time there is new team control."
+        data-pl="Kontrola zegarów czasu gry i czasu akcji przez sędziów stała się ostatnimi czasy standardem. Pięć lat temu ta praktyka 
+        była niemalże nieistniejąca - wówczas kwestionowano zdolność do jednoczesnej kontroli zegarów i utrzymaniu pełnego skupienia na 
+        ocenie zagrań. Sekret leży w odpowiedniej technice i wyczuciu czasu, a po tysiącach powtórzeń stanie się to nawykiem utrwalonym 
+        w pamięci mięśniowej. Dzięki temu za każdym razem, gdy zmieni się posiadanie piłki, zegar czasu gry będzie skontrolowany." 
+      ></p>
+
+    </section>
+    <section class="bg-gray-600 mt-4 p-4 rounded shadow-md text-white">
+
+      <table class="table-auto w-full border border-gray-600 text-left text-sm">
         <tbody>
+          
           <!-- Phase 1 -->
-          <tr class="bg-blue-100 font-semibold">
-            <td class="p-2 border border-gray-300" colspan="2">Phase 1</td>
-            <td class="p-2 border border-gray-300" colspan="2">Learn to control game clock</td>
+          <tr class="bg-amber-500 font-semibold border border-gray-30">
+            <td class="p-2"
+              data-lang data-en="Phase 1"
+              data-pl="Faza 1"
+            ></td>
+            <td class="p-2"
+              data-lang data-en="Learn to control game clock"
+              data-pl=""
+            ></td>
           </tr>
-          <tr>
-            <td class="p-2 border border-gray-300">Game clock - when it should be started</td>
-            <td class="p-2 border border-gray-300">
-              A. During a jump ball, the ball is legally tapped by a jumper.<br>
-              B. After an unsuccessful last or only free throw and the ball continues to be live, the ball touches or is touched by a player on the playing court.<br>
-              C. During a throw-in, the ball touches or is legally touched by a player on the playing court.
-            </td>
-          </tr>
-          <tr>
-            <td class="p-2 border border-gray-300">Game clock when it should be stopped</td>
-            <td class="p-2 border border-gray-300">
-              A. Time expires at the end of playing time for a quarter, if not stopped automatically by the game clock itself<br>
-              B. A referee blows the whistle while the ball is live.<br>
-              C. A field goal is scored against a team which has requested a time-out.<br>
-              D. A field goal is scored when the game clock shows 2:00 minutes or less in the fourth quarter and in each overtime.<br>
-              E. The shot clock signal sounds while a team is in control of the ball.
-            </td>
-          </tr>
+            <!-- Row 1 -->
+            <tr>
+              <td class="p-2"
+                data-lang data-en="Game clock - when it should be started"
+                data-pl=""
+              ></td>
+              <td class="p-2">
+                <p class="font-bold"
+                  data-lang data-en="Starting the game clock when:"
+                ></p>
+                <ol class="list-upper-alpha pl-6">
+                  <li class="mt-2"
+                    data-lang data-en="During a jump ball, the ball is legally tapped by a jumper."
+                    data-pl=""
+                  ></li>
+                  <li class="mt-2"
+                    data-lang data-en="After an unsuccessful last or only free throw and the ball continues to be live, the ball touches 
+                    or is touched by a player on the playing court."
+                    data-pl=""
+                  ></li>
+                  <li class="mt-2"
+                    data-lang data-en="During a throw-in, the ball touches or is legally touched by a player on the playing court."
+                    data-pl=""
+                  ></li>
+                </ol>
+              </td>
+            </tr><!-- Row 1 -->
+            <!-- Row 2 -->
+            <tr>
+              <td class="p-2"
+                data-lang data-en="Game clock - when it should be stopped"
+                data-pl=""
+              ></td>
+              <td class="p-2">
+                <p class="font-bold"
+                  data-lang data-en="Stopping the game clock when:"
+                ></p>
+                <ol class="list-upper-alpha pl-6">
+                  <li class="mt-2"
+                    data-lang data-en="Time expires at the end of playing time for a quarter, if not stopped automatically by the 
+                    game clock itself"
+                    data-pl=""
+                  ></li>
+                  <li class="mt-2"
+                    data-lang data-en="A referee blows the whistle while the ball is live."
+                    data-pl=""
+                  ></li>
+                  <li class="mt-2"
+                    data-lang data-en="A field goal is scored against a team which has requested a time-out."
+                    data-pl=""
+                  ></li>
+                  <li class="mt-2"
+                    data-lang data-en="A field goal is scored when the game clock shows 2:00 minutes or less in the fourth quarter and 
+                    in each overtime."
+                    data-pl=""
+                  ></li>
+                  <li class="mt-2"
+                    data-lang data-en="The shot clock signal sounds while a team is in control of the ball."
+                    data-pl=""
+                  ></li>
+                </ol>
+              </td>
+            </tr><!-- Row 2 --><!-- Phase 1 -->
       
           <!-- Phase 2 -->
-          <tr class="bg-green-100 font-semibold">
-            <td class="p-2 border border-gray-300" colspan="2">Phase 2</td>
-            <td class="p-2 border border-gray-300" colspan="2">Learn to control game clock whenever there is a new team possession</td>
+          <tr class="bg-amber-500 font-semibold border border-gray-300">
+            <td class="p-2"
+              data-lang data-en="Phase 2"
+              data-pl="Faza 2"
+            ></td>
+            <td class="p-2"
+              data-lang data-en="Learn to control game clock whenever there is a new team possession"
+              data-pl=""
+            ></td>
           </tr>
-          <tr>
-            <td class="p-2 border border-gray-300">Team establishes a new team control possession (new shot clock period)</td>
-            <td class="p-2 border border-gray-300">
-              A. Pick up the last two digits of the game clock.<br>
-              B. Example: 6:26 → pick up the 26.<br>
-              C. Whenever you have to correct the shot clock, you know the game clock time and when the shot clock period started.<br>
-              D. Example: 6:26 - new team possession → ball goes out of bounds and shot clock is re-set by mistake.<br>
-              Game clock shows 6:10 → Referee does: 26 - 10 = 16 → correct shot clock is 8 seconds.
-            </td>
+            <!-- Row 1 -->
+            <tr>
+              <td class="p-2"
+                data-lang data-en="Team establishes a new team control possession (new shot clock period)"
+                data-pl=""
+              ></td>
+              <td class="p-2">
+                <p class="font-bold"
+                  data-lang data-en="Pick up the game clock:"
+                ></p>
+                <div class="flex flex-row">
+                  
+                  <ol class="list-upper-alpha pl-6 mr-4 w-3/4">
+                    <li class="mt-2"
+                      data-lang data-en="Pick up the last two digits of the game clock."
+                      data-pl=""
+                    ></li>
+                    <li class="mt-2"
+                      data-lang data-en="Example: 6:26 → pick up the 26."
+                      data-pl=""
+                    ></li>
+                    <li class="mt-2"
+                      data-lang data-en="Whenever you have to correct the shot clock, you know the game clock time and when the 
+                      shot clock period started."
+                      data-pl=""
+                    ></li>
+                    <li class="mt-2"
+                      data-lang data-en="Example: 6:26 - new team possession → ball goes out of bounds and shot clock is re-set 
+                      by mistake. Game clock shows 6:10 → Referee does: 26 - 10 = 16 → correct shot clock is 8 seconds."
+                      data-pl=""
+                    ></li>
+                  </ol>
+
+                  <img class="rounded object-cover" src="assets/shot_clock.png"></div>
+
+                </div>
+              </td>
+            </tr><!-- Row 1 -->
+
+            <!-- Row 2 -->
+            <tr>
+              <td class="p-2"
+                data-lang data-en="Most common situations when errors occur with timing"
+                data-pl=""
+              ></td>
+              <td class="p-2">
+                <ol class="list-upper-alpha pl-6">
+                  <li class=""
+                    data-lang data-en="Jump ball - legally tap (start game clock) and first possession (shot clock)"
+                    data-pl=""
+                  ></li>
+                  <li class="mt-2"
+                    data-lang data-en="Out of bound play (stop game clock)"
+                    data-pl=""
+                  ></li>
+                  <li class="mt-2"
+                    data-lang data-en="Throw-in (start game clock)"
+                    data-pl=""
+                  ></li>
+                  <li class="mt-2"
+                    data-lang data-en="Rebound play - new possession (shot clock)"
+                    data-pl=""
+                  ></li>
+                  <li class="mt-2"
+                    data-lang data-en="Saving ball from out of bounds play (if new control or not – shot clock)"
+                    data-pl=""
+                  ></li>
+                  <li class="mt-2"
+                    data-lang data-en='"Loose ball" but not a change of team control (re-set clock by mistake)'
+                    data-pl=''
+                  ></li>
+                </ol>
+              </td>
+          </tr><!-- Row 2 --><!-- Phase 2 -->
+
+          <!-- Phase 3 -->
+          <tr class="bg-amber-500 font-semibold border border-gray-300">
+            <td class="p-2"
+              data-lang data-en="Phase 3"
+              data-pl="Faza 3"
+            ></td>
+            <td class="p-2"
+              data-lang data-en="Learn to control game and shot clock in the end of quarter"
+              data-pl=""
+            ></td>
           </tr>
-          <tr>
-            <td class="p-2 border border-gray-300">Most common situations when errors occur with timing</td>
-            <td class="p-2 border border-gray-300">
-              A. Jump ball - legally tap (start game clock) and first possession (shot clock)<br>
-              B. Out of bound play (stop game clock)<br>
-              C. Throw-in (start game clock)<br>
-              D. Rebound play - new possession (shot clock)<br>
-              E. Saving ball from out of bounds play (if new control or not – shot clock)<br>
-              F. “Loose ball” but not a change of team control (re-set clock by mistake)
-            </td>
-          </tr>
+            <!-- Row 1 -->
+            <tr>
+              <td class="p-2"
+                data-lang data-en="Team establishes a new team control possession (new shot clock period)"
+                data-pl=""
+              ></td>
+
+              <td class="p-2">
+
+                <p class="font-bold"
+                  data-lang data-en="When you have 24.0 / 14.0* seconds or less on the game and there is a new team control:"
+                ></p>
+
+                <div class="flex flex-row">
+                  
+                  <div>
+                    <ol class="list-upper-alpha pl-6 mr-4 w-3/4">
+                      <li class="mt-2"
+                        data-lang data-en="One of the referees indicates this by showing one finger."
+                        data-pl=""
+                      ></li>
+                      <li class="mt-2"
+                        data-lang data-en="The other referee(s) will copy the signal (mirroring)."
+                        data-pl=""
+                      ></li>
+                      <li class="mt-2"
+                        data-lang data-en="This means: it is possible that the quarter will end during this team’s control."
+                        data-pl=""
+                      ></li>
+                      <li class="mt-2"
+                        data-lang data-en="All referees should get ready to pay close attention to the game clock in order to determine 
+                        in a last moment shot situation whether the shot has been taken in time – A valid basket or not 
+                        (cancelled basket)."
+                        data-pl=""
+                      ></li>
+                    </ol>
+
+                    <p class="mt-4"
+                      data-lang data-en="*in case of offensive rebound or throw-in from front court according to OBR article 29.2.1"
+                      data-pl=""
+                    ></p>
+
+                  </div>
+
+                  <div><img class="rounded object-cover w-64 h-auto" src="assets/s_stop_clock.png"></div>
+
+                </div>
+              </td>
+            </tr><!-- Row 1 --><!-- Phase  1 -->
+
         </tbody>
       </table>
-      
-    </article>
+    </section>
 
+    <section class="flex flex-row mt-4">
+    
+      <!-- LEFT PANE -->
+      <div class="bg-white p-4 rounded shadow-md text-black max-w-3xl mr-4">
+
+        <h2 class="text-2xl font-bold"
+          data-lang data-en="Shot clock violation procedure"
+          data-pl=""
+        ></h2>
+        
+        <p class="p-2 text-xl"
+          data-lang data-en="When signal sounds / LED lights appear for the end of the quarter:"
+          data-pl=""
+        ></p>
+
+        <!-- FIRST BLOCK -->
+        <div class="flex flex-row mt-4 p-6">
+              
+          <!-- Text Section -->
+          <div class="flex-1">
+              <p class=""
+                data-lang data-en="- Referee blows the whistle immediately and raises one hand."
+                data-pl=""
+              ></p>
+            </div>
+        
+          <!-- Image Section -->
+          <div><img class="w-auto h-48" src="assets/s_stop_clock_2.png"></div>
+        
+        </div><!-- FIRST BLOCK -->
+
+        <!-- SECOND BLOCK -->
+        <div class="flex flex-row mt-4 p-6">
+              
+          <!-- Text Section -->
+          <div class="flex-1">
+              <p class=""
+                data-lang data-en="- If the basket is valid (ball is released before the signal sounds / LED lights appear), 
+                the referee keeps the hand up and when ball goes into the basket shows the basket count signal (2/3 points)."
+                data-pl=""
+              ></p>
+            </div>
+        
+          <!-- Image Section -->
+          <div><img class="rounded w-auto h-48" src="assets/basket_in.png"></div>
+        
+        </div><!-- SECOND BLOCK -->
+
+        <!-- THIRD BLOCK -->
+        <div class="flex flex-row mt-4 p-6">
+              
+          <!-- Text Section -->
+          <div class="flex-1">
+              <p class=""
+                data-lang data-en="- If the basket is to be cancelled (ball is still in the hand of the shooter when the signal sounds 
+                / LED lights appear), the referee indicates immediately the “cancel basket” signal."
+                data-pl=""
+              ></p>
+            </div>
+        
+          <!-- Image Section -->
+          <div><img class="rounded object-cover w-auto h-48" src="assets/basket_cancelled.png"></div>
+      
+        </div><!-- THIRD BLOCK -->
+        
+      </div><!-- LEFT PANE -->
+
+      <!-- RIGHT PANE -->
+      <div class="bg-white p-4 rounded shadow-md text-black w-full">
+        <h2 class="text-2xl font-bold"
+          data-lang data-en="Shot clock violation procedure:"
+          data-pl=""
+        ></h2>
+
+        <!-- FIRST BLOCK -->
+        <div class="flex flex-row mt-4 p-6">
+              
+          <!-- Text Section -->
+          <div class="flex-1">
+            <p
+              data-lang data-en="When the shot clock violation occurs:"
+              data-pl=""
+            ></p>
+            <ol class="list-decimal pl-8">
+              <li class="mt-2"
+                data-lang data-en="Trail and/or Centre referee blows the whistle immediately and raises one hand to stop the game clock, 
+                and"
+                data-pl=""
+              ></li>
+              <li class="mt-2"
+                data-lang data-en="Then the calling referee shows the official signal for shot clock violation."
+                data-pl=""
+              ></li>
+            </ul>
+            </div>
+        
+          <!-- Image Section -->
+          <div class="flex flex-row">
+            <img class="w-auto h-48 ml-2 mr-2" src="assets/s_stop_clock_2.png">
+            <img class="w-auto h-48" src="assets/s_shot_clock_violation.png">
+          </div>
+        
+        </div><!-- FIRST BLOCK -->
+
+        <!-- SECOND BLOCK -->
+        <p class=""
+          data-lang data-en="When a shot for a field goal is attempted near the end of the 24-second period and the shot clock signal 
+          sounds while the ball is in the air:"
+          data-pl=""
+        ></p>
+
+        <div class="flex flex-col mt-4 p-6">
+          <div class="flex flex-row">
+            <img class="w-1/2 h-auto object-contain" src="assets/shot_clock_A.png">
+            <img class="w-1/2 h-auto object-contain" src="assets/shot_clock_B.png">
+          </div>
+
+          <div class="mt-2">
+            <p class=""
+              data-lang data-en="A) If the ball misses the ring, a violation has occurred and referees should blow their whistle. 
+              However, if the opponents gain immediate and clear control of the ball (B), the signal shall be disregarded and 
+              the game shall continue."
+              data-pl=""
+            ></p>
+          </div>
+
+          <div class="mt-4 flex flex-row">
+            <img class="w-1/2 h-auto object-contain" src="assets/shot_clock_C.png">
+            <img class="w-1/2 h-auto object-contain" src="assets/shot_clock_D.png">
+          </div>
+
+          <div class="mt-2 flex flex-row">
+            <p class="w-1/2 h-auto object-contain"
+              data-lang data-en="C) If the ball enters the basket, no violation has occurred, the signal shall be disregarded 
+              and the goal shall count."
+              data-pl=""
+            ></p>
+            <p class="w-1/2 h-auto object-contain"
+              data-lang data-en="D) If the ball touches the ring but does not enter the basket, no violation has occurred, 
+              the signal shall be disregarded and the game shall continue."
+              data-pl=""
+            ></p>
+          </div>
+        
+        </div><!-- SECOND BLOCK -->
+
+      </div><!-- RIGHT PANE -->
+      
+    </section>
+    </article>
 
   </main>
 
