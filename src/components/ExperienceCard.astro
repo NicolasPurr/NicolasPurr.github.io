@@ -1,0 +1,43 @@
+---
+// src/components/ExperienceCard.astro
+import { workData } from '../data/cv-data';
+import BulletPoint from './icons/BulletPoint.astro';
+---
+<section class="space-y-8">
+  <div class="flex items-center gap-4 mb-6">
+    <h2 class="text-2xl font-black uppercase tracking-tighter">Professional</h2>
+    <div class="h-0.5 flex-1 bg-slate-200"></div>
+  </div>
+
+  {workData.map((job, index) => {
+      
+    const statusStyles: { [key: string]: string } = {
+      ongoing: "bg-violet-500 border-violet-600 [background:conic-gradient(theme(colors.violet.500)_180deg,transparent_0)] rotate-[-45deg]",
+      completed: "bg-violet-500 border-violet-600",
+      resigned: "bg-red-600 border-red-700 shadow-sm",
+    };
+
+    const circleColor = statusStyles[job.status] || "bg-white border-slate-300";
+
+    return (
+      <div class="group relative pl-8 border-l-2 border-slate-200">
+        <div class={`absolute -left-2.25 top-1.5 w-4 h-4 rounded-full border-2 transition-all duration-300 ${circleColor} group-hover:scale-110`}></div>
+          
+        <h3 class="text-lg font-bold leading-tight">{job.company}</h3>
+        <p class="text-violet-500 font-medium text-sm">{job.role}</p>
+        <p class="text-slate-400 text-xs font-mono mt-1">{job.duration}</p>
+          
+        <ul class="mt-3 space-y-2">
+          {job.description.map(bullet => (
+            <li class="flex gap-3 text-sm text-slate-600 leading-relaxed">
+              <div class="mt-[5px] shrink-0 transition-all duration-300 group-hover:translate-x-1 group-hover:text-blue-400">
+                <BulletPoint />
+              </div>
+              <span>{bullet}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  })}
+</section>
