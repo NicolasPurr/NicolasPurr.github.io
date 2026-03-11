@@ -10,19 +10,14 @@ jobs:
         with:
           node-version: 20
           cache: 'npm'
-          # Point cache to the nested lockfile
-          cache-dependency-path: './cv/package-lock.json' 
-      - name: Install & Build
-        # We must 'cd' into the folder before running commands
-        run: |
-          cd cv
-          npm install
-          npm run build
+      - name: Install dependencies
+        run: npm install
+      - name: Build Astro
+        run: npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # This is the magic line: upload the dist INSIDE cv
-          path: ./cv/dist 
+          path: ./dist # Upload from the root dist folder
 
   deploy:
     needs: build
