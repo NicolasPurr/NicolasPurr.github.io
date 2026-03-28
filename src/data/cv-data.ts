@@ -16,10 +16,10 @@ export const personalInfo: Identity = {
   };
 
 export const professionalDescription = "\
-Dual-degree Computer Science & Quantitative Methods student bridging technical rigour with business acumen. \
-Experience in IT security and automation at Accenture, where I re-engineered legacy tools into \
-high-performance solutions. Multi-national basketball official with a proven record of high-stakes \
-decision-making. Focused on software security and cryptology.\
+Dual-degree Computer Science (MIMUW) & Quantitative Methods (SGH) student specialising in software \
+security and cryptology. Proven track record of optimising legacy systems at Accenture, \
+transforming inefficient tools into scalable solutions. Multi-national basketball official \
+with a proven record of high-stakes, real-time decision-making and conflict resolution.\
 ";
 
 export const languages: { name: string; level: number; label: string }[] = [
@@ -118,32 +118,49 @@ export const academicData: Education[] = [
       description: "Despite having decided to abandon my studies at TU Delft, I look back on my stay in the Netherlands as a period of intellectual and emotional growth.",
       mainGrades: [
       ],
+    },
+    {
+      uni: "Stefan Batory High School in Warsaw",
+      degree: "International Baccalaureate",
+      location: "Warsaw, Poland",
+      status: "completed",
+      duration: "2019 - 2022",
+      description: "Focus on mathematics, economics, and languages. 43/45 points.",
+      mainGrades: [
+        { name: "Mathematics: Analysis and Approaches HL", score: 7 },
+        { name: "Economics HL", score: 7 },
+        { name: "English B HL", score: 7 },
+        { name: "Physics HL", score: 6 },
+        { name: "Polish A: Language and Literature SL", score: 6 },
+        { name: "French B SL", score: 7 },
+        { name: "Extended Essay (English B)", score: "A" },
+        { name: "Theory of Knowledge", score: "B" }
+      ],
     }
   ];
   
   export const workData: Work[] = [
-    {
-      company: "WOZKosz & Nederlandse Basketball Bond",
-      role: "Basketball Official",
-      duration: "Dec 2019 - Present (Season 22/23 @ NBB)",
-      status: "ongoing",
-      description: [ 
-        "Collaborated with diverse officiating crews across international youth tournaments (Riga, Gothenburg), adapting to various communication styles and establishing authority in foreign-language environments.",
-        "Managed game flow and conflict resolution in competitive environments.",
-        "Translated rule changes from English to Polish for local referees.",
-        "Led training sessions for junior officials."
-      ]
-    },
     {
       company: "Accenture",
       role: "SAP Security Delivery Associate",
       duration: "Aug 2024 - Apr 2025",
       status: "completed",
       description: [
-        "Worked within a globally distributed, culturally diverse team.",
-        "Identified critical inefficiencies in an internal team tool. Inspected and re-engineered the algorithmic logic (Excel VBA), transforming it into an optimised, maintainable, and scalable solution.",
+        "Re-engineered the algorithmic logic of a legacy VBA tool to improve scalability, achieving a 99% reduction in processing time for large datasets (from several minutes to <2s).",
         "Automated team operational workflows via custom scripts (Python) and dynamic progress trackers (Excel), significantly reducing manual overhead.",
+        "Contributed to SAP security delivery within a globally distributed, multi-cultural team.",
       ],
       skills: ["SAP Security", "Automation", "Python"]
+    },
+    {
+      company: "WOZKosz & Nederlandse Basketball Bond",
+      role: "Basketball Official",
+      duration: "Dec 2019 - Present (Season 22/23 @ NBB)",
+      status: "ongoing",
+      description: [
+        "Served as Crew Chief for the 2023 National U-18 Men’s Final in the Netherlands, managing high-pressure game flow and official crew.",
+        "Officiated international youth tournaments (Riga, Gothenburg), establishing authority and clear communication in foreign-language and high-tension environments.",
+        "Led training sessions for junior officials and translated FIBA rule changes from English to Polish for the local association.",
+      ]
     },
   ];
