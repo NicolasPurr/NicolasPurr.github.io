@@ -101,11 +101,11 @@ export const academicData: Education[] = [
         duration: "January 2026 - May 2026",
         status: "ongoing",
         mainGrades: [
-            { name: "Software Security", inProgress: true },
-            { name: "Computer Security", inProgress: true },
-            { name: "IOT: Communication & Networking", inProgress: true },
-            { name: "Creative Writing: Poetry", inProgress: true },
-            { name: "Organisational Behaviour & Design", inProgress: true }
+            { name: "Software Security", score: "A+", },
+            { name: "Computer Security", score: "A+", },
+            { name: "IOT: Communication & Networking", score: "C", },
+            { name: "Creative Writing: Poetry", score: "A-", },
+            { name: "Organisational Behaviour & Design", score: "A+", }
         ]
       }
     },
