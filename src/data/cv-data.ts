@@ -7,7 +7,7 @@ const SGH_LINK = "https://usosweb.sgh.waw.pl/kontroler.php?_action=katalog2/prze
 export const personalInfo: Identity = {
     name: "Mikołaj Kot",
     email: "mikolaj.kot@tuta.com",
-    location: "Singapore -> Warsaw -> Paris",
+    location: "Warsaw -> Paris",
     highlights: [
       "Cybersecurity enthusiast",
       "Dual-degree student",
@@ -16,11 +16,10 @@ export const personalInfo: Identity = {
   };
 
 export const professionalDescription = "\
-Dual-degree Computer Science (MIMUW) & Quantitative Methods (SGH) student specialising in software \
-security and cryptology. Proven track record of optimising legacy systems at Accenture, \
-transforming inefficient tools into scalable solutions. Multi-national basketball official \
-with a proven record of high-stakes, real-time decision-making and conflict resolution.\
-";
+Dual-degree Computer Science (MIMUW) and Quantitative Methods (SGH) student specialising in cryptology \
+and software security. Combines a strong background in algorithms with high-stakes decision-making skills \
+developed as a basketball official.";
+
 
 export const languages: { name: string; level: number; label: string }[] = [
     { name: "Polish", level: 6, label: "Native" },
@@ -30,11 +29,11 @@ export const languages: { name: string; level: number; label: string }[] = [
 ];
 
 export const techSkills: TechSkill[] = [
-    { name: "Python", level: "Advanced", focus: "Security Tooling & Automation" },
     { name: "Rust", level: "Competent", focus: "Cryptology" },
-    { name: "Excel VBA", level: "Advanced", focus: "Data manipulation and reporting" },
+    { name: "Python", level: "Advanced", focus: "Security Tooling & Automation" },
+    //{ name: "Excel VBA", level: "Advanced", focus: "Data manipulation and reporting" },
     { name: "Bash", level: "Competent", focus: "Scripting" },
-    //{ name: "SQL", level: "Competent", focus: "Optimised database querying" },
+    { name: "SQL", level: "Competent", focus: "Optimised database querying" },
     //{ name: "JavaScript", level: "Competent", focus: "Web development" },
 ];
 
@@ -63,15 +62,15 @@ export const academicData: Education[] = [
       duration: "2023 - 2027",
       description: "Algorithmics, cryptology, and software security.",
       mainGrades: [
-        { name: "Cryptography I", inProgress: true, curriculumUrl: `${MIMUW_LINK}1000-2M24KI1` },
-        { name: "Cybersecurity Operations", inProgress: true, curriculumUrl: `${MIMUW_LINK}1000-2M24OC` },
-        { name: "Information theory", inProgress: true, curriculumUrl: `${MIMUW_LINK}1000-2N03TI` },
-        { name: "Introduction to Cybersecurity and Cryptography", score: 5.0, curriculumUrl: `${MIMUW_LINK}1000-2M24WCK` },
-        { name: "Applied Cryptography", score: 5.0, curriculumUrl: `${MIMUW_LINK}1000-2M25KST` },
-        { name: "Web applications", score: 5.0, curriculumUrl: `${MIMUW_LINK}1000-214bWWW` },
-        { name: "Modern web applications", score: 5.0, curriculumUrl: `${MIMUW_LINK}1000-2M24WAW` },
-        { name: "Database Systems", score: "5!", curriculumUrl: `${MIMUW_LINK}1000-213bBD` },
-        { name: "Computer Networks", score: 4.5, curriculumUrl: `${MIMUW_LINK}1000-214bSIK` }
+        { name: "Cryptography I", inProgress: true, curriculumUrl: `${MIMUW_LINK}1000-2M12KI1&lang=en` },
+        { name: "Information theory", score: "5!", curriculumUrl: `${MIMUW_LINK}1000-2N03TI&lang=en` },
+        { name: "Introduction to Cybersecurity and Cryptography", score: 5.0, curriculumUrl: `${MIMUW_LINK}1000-2M24WCK&lang=en` },
+        { name: "Applied Cryptography", score: 5.0, curriculumUrl: `${MIMUW_LINK}1000-2M25KST&lang=en` },
+        { name: "Cybersecurity Operations", score: 3.5, curriculumUrl: `${MIMUW_LINK}1000-2M24OC&lang=en` },
+        { name: "Web applications", score: 5.0, curriculumUrl: `${MIMUW_LINK}1000-214bWWW&lang=en` },
+        { name: "Modern web applications", score: 5.0, curriculumUrl: `${MIMUW_LINK}1000-2M24WAW&lang=en` },
+        { name: "Database Systems", score: "5!", curriculumUrl: `${MIMUW_LINK}1000-213bBD&lang=en` },
+        { name: "Computer Networks", score: 4.5, curriculumUrl: `${MIMUW_LINK}1000-214bSIK&lang=en` },
       ],
       exchange: {
         institution: "EFREI",
@@ -89,23 +88,23 @@ export const academicData: Education[] = [
       duration: "2023 - 2026",
       description: "Data analysis, econometrics, and information systems management.",
       mainGrades: [
-        { name: "Analysis and Design of Information Systems I", score: 5.0, curriculumUrl: `${SGH_LINK}120521-D` },
-        { name: "Analysis and Design of Information Systems II", score: 5.0, curriculumUrl: `${SGH_LINK}121420-D` },
-        { name: "e-Banking", score: 5.0, curriculumUrl: `${SGH_LINK}136171-D` },
-        { name: "Survey Methods", score: 4.5, curriculumUrl: `${SGH_LINK}121560-D` },
+        { name: "Analysis and Design of Information Systems I", score: 5.0, curriculumUrl: `${SGH_LINK}120521-D&lang=en` },
+        { name: "Analysis and Design of Information Systems II", score: 5.0, curriculumUrl: `${SGH_LINK}121420-D&lang=en` },
+        { name: "e-Banking", score: 5.0, curriculumUrl: `${SGH_LINK}136171-D&lang=en` },
+        { name: "Survey Methods", score: 4.5, curriculumUrl: `${SGH_LINK}121560-D&lang=en` },
         { name: "Econometrics I", score: 4.5, curriculumUrl: `${SGH_LINK}120730-D` }
       ],
       exchange: {
         institution: "Nanyang Technological University",
         location: "Singapore",
         duration: "January 2026 - May 2026",
-        status: "ongoing",
+        status: "completed",
+        grade: "4.42/5.0",
         mainGrades: [
             { name: "Software Security", score: "A+", },
             { name: "Computer Security", score: "A+", },
+            { name: "Organisational Behaviour & Design", score: "A+", },
             { name: "IOT: Communication & Networking", score: "C", },
-            { name: "Creative Writing: Poetry", score: "A-", },
-            { name: "Organisational Behaviour & Design", score: "A+", }
         ]
       }
     },
@@ -124,17 +123,18 @@ export const academicData: Education[] = [
       degree: "International Baccalaureate",
       location: "Warsaw, Poland",
       status: "completed",
+      grade: "43/45",
       duration: "2019 - 2022",
-      description: "Focus on mathematics, economics, and languages. 43/45 points.",
+      description: "Mathematics, economics, and languages.",
       mainGrades: [
         { name: "Mathematics: Analysis and Approaches HL", score: 7 },
         { name: "Economics HL", score: 7 },
-        { name: "English B HL", score: 7 },
         { name: "Physics HL", score: 6 },
-        { name: "Polish A: Language and Literature SL", score: 6 },
-        { name: "French B SL", score: 7 },
-        { name: "Extended Essay (English B)", score: "A" },
-        { name: "Theory of Knowledge", score: "B" }
+        //{ name: "English B HL", score: 7 },
+        //{ name: "Polish A: Language and Literature SL", score: 6 },
+        //{ name: "French B SL", score: 7 },
+        //{ name: "Extended Essay (English B)", score: "A" },
+        //{ name: "Theory of Knowledge", score: "B" }
       ],
     }
   ];
@@ -146,7 +146,7 @@ export const academicData: Education[] = [
       duration: "Aug 2024 - Apr 2025",
       status: "completed",
       description: [
-        "Re-engineered the algorithmic logic of a legacy VBA tool to improve scalability, achieving a 99% reduction in processing time for large datasets (from several minutes to <2s).",
+        "Optimised core algorithmic logic for large-scale data processing tools, reducing execution time by 99% and ensuring scalability.",
         "Automated team operational workflows via custom scripts (Python) and dynamic progress trackers (Excel), significantly reducing manual overhead.",
         "Contributed to SAP security delivery within a globally distributed, multi-cultural team.",
       ],

@@ -21,6 +21,7 @@
   
   export interface Exchange {
     status: "ongoing" | "completed" | "upcoming";
+    grade?: string;
     institution: string;
     location: string;
     duration: string;
@@ -29,6 +30,7 @@
   
   export interface Education {
     status: "ongoing" | "completed" | "upcoming" | "resigned";
+    grade?: string;
     uni: string;
     degree: string;
     location: string;

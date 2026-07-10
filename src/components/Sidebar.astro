@@ -46,29 +46,6 @@ import { personalInfo, languages, techSkills, passions, professionalDescription 
       <div class="space-y-6">
 
         <div class="mt-8 space-y-4">
-          <h2 class="text-xs uppercase tracking-widest text-slate-500 font-bold mb-4">Languages</h2>
-          <div class="grid grid-cols-2 gap-x-12 gap-y-4">
-            {languages.map((lang) => (
-              <div class="flex items-center justify-between group border-b border-slate-800/50 pb-2">
-                <div class="flex flex-col">
-                  <span class="text-sm font-semibold text-slate-200 group-hover:text-blue-400 transition-colors">
-                    {lang.name}
-                  </span>
-                </div>
-                <div class="flex flex-col items-end">
-                  <span class="text-[10px] font-black uppercase tracking-tighter text-blue-500/90">
-                    {lang.label}
-                  </span>
-                  <span class="text-[12px] text-slate-600 font-medium">
-                    {lang.level === 6 ? 'C2' : lang.level === 5 ? 'C1' : 'B2'}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div class="mt-8 space-y-4">
           <h2 class="text-xs uppercase tracking-widest text-slate-500 font-bold mb-4">Programming & Tech Skills</h2>
           <div class="grid grid-cols-2 gap-x-8 gap-y-6">
             {techSkills.map((skill) => (
@@ -89,6 +66,29 @@ import { personalInfo, languages, techSkills, passions, professionalDescription 
                 <p class="text-[10px] text-slate-500 leading-tight italic">
                   {skill.focus}
                 </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="mt-8 space-y-4">
+          <h2 class="text-xs uppercase tracking-widest text-slate-500 font-bold mb-4">Languages</h2>
+          <div class="grid grid-cols-2 gap-x-12 gap-y-4">
+            {languages.map((lang) => (
+              <div class="flex items-center justify-between group border-b border-slate-800/50 pb-2">
+                <div class="flex flex-col">
+                  <span class="text-sm font-semibold text-slate-200 group-hover:text-blue-400 transition-colors">
+                    {lang.name}
+                  </span>
+                </div>
+                <div class="flex flex-col items-end">
+                  <span class="text-[10px] font-black uppercase tracking-tighter text-blue-500/90">
+                    {lang.label}
+                  </span>
+                  <span class="text-[12px] text-slate-600 font-medium">
+                    {lang.level === 6 ? 'C2' : lang.level === 5 ? 'C1' : 'B2'}
+                  </span>
+                </div>
               </div>
             ))}
           </div>
