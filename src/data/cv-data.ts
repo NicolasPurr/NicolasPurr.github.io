@@ -17,8 +17,8 @@ export const personalInfo: Identity = {
 
 export const professionalDescription = "\
 Dual-degree Computer Science (MIMUW) and Quantitative Methods (SGH) student specialising in cryptology \
-and software security. Combines a strong background in algorithms with high-stakes decision-making skills \
-developed as a basketball official.";
+and software security. I combine a strong background in algorithms with high-stakes decision-making and \
+communication skills developed as a basketball official.";
 
 
 export const languages: { name: string; level: number; label: string }[] = [
@@ -72,13 +72,13 @@ export const academicData: Education[] = [
         { name: "Database Systems", score: "5!", curriculumUrl: `${MIMUW_LINK}1000-213bBD&lang=en` },
         { name: "Computer Networks", score: 4.5, curriculumUrl: `${MIMUW_LINK}1000-214bSIK&lang=en` },
       ],
-      exchange: {
+      /*exchange: {
         institution: "EFREI",
         location: "Paris, France",
         duration: "upcoming",
         status: "upcoming",
         mainGrades: [ ]
-      }
+      }*/
     },
     {
       uni: "SGH Warsaw School of Economics",
