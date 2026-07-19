@@ -1,7 +1,7 @@
 ---
 import Pin from '../components/icons/Pin.astro';
 import Envelope from '../components/icons/Envelope.astro';
-import { personalInfo, languages, techSkills, passions, professionalDescription } from '../data/cv-data';
+import { personalInfo, languages, techSkills, softSkills, passions, professionalDescription } from '../data/cv-data';
 ---
 
 <aside class="w-full lg:w-80 xl:w-96 bg-slate-900 text-slate-300 p-8 shrink-0">
@@ -93,6 +93,17 @@ import { personalInfo, languages, techSkills, passions, professionalDescription 
             ))}
           </div>
         </div>
+
+        <div>
+          <h2 class="text-xs uppercase tracking-widest text-slate-500 font-bold mb-3">Soft Skills</h2>
+          <div class="flex flex-wrap gap-2">
+            {softSkills.map(skill => (
+              <div class="group relative inline-block">
+                <span class="bg-blue-900/30 text-blue-300 px-2 py-1 rounded text-xs border border-blue-800/50">{skill}</span>
+              </div>
+            ))}
+          </div>
+        </div>
             
             <div>
               <h2 class="text-xs uppercase tracking-widest text-slate-500 font-bold mb-3">Passions</h2>
@@ -106,7 +117,7 @@ import { personalInfo, languages, techSkills, passions, professionalDescription 
                       <div class="
                         pointer-events-none absolute bottom-full mb-2 z-50 
                         opacity-0 group-hover:opacity-100 transition-opacity
-                        left-0 w-[200px] max-w-[80vw] 
+                        left-0 w-50 max-w-[80vw] 
                         bg-black text-white border border-red-600 px-2 py-1 rounded-sm 
                         text-[10px] tracking-tighter whitespace-normal shadow-[2px_2px_0px_#dc2626]
                       ">

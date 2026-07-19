@@ -48,3 +48,13 @@
     description: string[];
     skills?: string[];
   }
+
+  export interface Project {
+    name: string;
+    type: string;
+    status: "ongoing" | "completed";
+    tags: string[];
+    link?: string;
+    linkLabel?: string;
+    description: string[];
+  }

@@ -1,4 +1,4 @@
-import type { Education, Work, Exchange, Grade, Identity, TechSkill } from "./interfaces";
+import type { Education, Exchange, Grade, Identity, Project, TechSkill, Work } from "./interfaces";
 
 const MIMUW_LINK = "https://usosweb.mimuw.edu.pl/kontroler.php?_action=katalog2/przedmioty/pokazPrzedmiot&prz_kod=";
 const SGH_LINK = "https://usosweb.sgh.waw.pl/kontroler.php?_action=katalog2/przedmioty/pokazPrzedmiot&prz_kod=";
@@ -7,7 +7,7 @@ const SGH_LINK = "https://usosweb.sgh.waw.pl/kontroler.php?_action=katalog2/prze
 export const personalInfo: Identity = {
     name: "Mikołaj Kot",
     email: "mikolaj.kot@tuta.com",
-    location: "Warsaw -> Paris",
+    location: "Warsaw",
     highlights: [
       "Cybersecurity enthusiast",
       "Dual-degree student",
@@ -16,9 +16,9 @@ export const personalInfo: Identity = {
   };
 
 export const professionalDescription = "\
-Dual-degree Computer Science (MIMUW) and Quantitative Methods (SGH) student specialising in cryptology \
-and software security. I combine a strong background in algorithms with high-stakes decision-making and \
-communication skills developed as a basketball official.";
+Dual-degree Computer Science (MIMUW) and Quantitative Methods (SGH) student specialising in \
+cryptography and software security. I combine a strong background in algorithms and data processing \
+with high-stakes decision-making and communication skills developed as a basketball official.";
 
 
 export const languages: { name: string; level: number; label: string }[] = [
@@ -31,18 +31,17 @@ export const languages: { name: string; level: number; label: string }[] = [
 export const techSkills: TechSkill[] = [
     { name: "Rust", level: "Competent", focus: "Cryptology" },
     { name: "Python", level: "Advanced", focus: "Security Tooling & Automation" },
-    //{ name: "Excel VBA", level: "Advanced", focus: "Data manipulation and reporting" },
     { name: "Bash", level: "Competent", focus: "Scripting" },
     { name: "SQL", level: "Competent", focus: "Optimised database querying" },
+    //{ name: "Excel VBA", level: "Expert", focus: "Data manipulation and reporting" },
     //{ name: "JavaScript", level: "Competent", focus: "Web development" },
 ];
 
 export const softSkills: string[] = [
-    "Communication",
     "Leadership",
-    "Analytical thinking",
+    "Conflict resolution",
     "Problem-solving",
-    "Adaptability"
+    "Stakeholder management",
 ];
 
 export const passions: string[] = [
@@ -60,7 +59,7 @@ export const academicData: Education[] = [
       location: "Warsaw, Poland",
       status: "ongoing",
       duration: "2023 - 2027",
-      description: "Algorithmics, cryptology, and software security.",
+      description: "Cryptology, software security, and algorithmics.",
       mainGrades: [
         { name: "Cryptography I", inProgress: true, curriculumUrl: `${MIMUW_LINK}1000-2M12KI1&lang=en` },
         { name: "Information theory", score: "5!", curriculumUrl: `${MIMUW_LINK}1000-2N03TI&lang=en` },
@@ -114,7 +113,7 @@ export const academicData: Education[] = [
       location: "Delft, Netherlands",
       status: "resigned",
       duration: "2022 - 2023",
-      description: "Despite having decided to abandon my studies at TU Delft, I look back on my stay in the Netherlands as a period of intellectual and emotional growth.",
+      description: "Completed foundational coursework before transferring to Poland to pursue a double degree.",
       mainGrades: [
       ],
     },
@@ -146,9 +145,12 @@ export const academicData: Education[] = [
       duration: "Aug 2024 - Apr 2025",
       status: "completed",
       description: [
-        "Optimised core algorithmic logic for large-scale data processing tools, reducing execution time by 99% and ensuring scalability.",
-        "Automated team operational workflows via custom scripts (Python) and dynamic progress trackers (Excel), significantly reducing manual overhead.",
-        "Contributed to SAP security delivery within a globally distributed, multi-cultural team.",
+        "Developed Python and VBA scripts to securely download, split, and parse client server files into Excel, enforcing strict format validation rules and building visual dashboards to track real-time project stages under team SLAs.",
+        "Re-engineered core data processing logic to O(n log n), achieving a 99% reduction in processing execution time} and enabling the tool to seamlessly process security data for multinational enterprise clients.",
+        "Collaborated within a globally distributed team to implement SAP security modules (GRC, IAM) and deliver compliance documentation for international business units.",
+        //"Optimised core algorithmic logic for large-scale data processing tools, reducing execution time by 99% and ensuring scalability.",
+        //"Automated team operational workflows via custom scripts (Python) and dynamic progress trackers (Excel), significantly reducing manual overhead.",
+        //"Contributed to SAP security delivery within a globally distributed, multi-cultural team.",
       ],
       skills: ["SAP Security", "Automation", "Python"]
     },
@@ -160,7 +162,43 @@ export const academicData: Education[] = [
       description: [
         "Served as Crew Chief for the 2023 National U-18 Men’s Final in the Netherlands, managing high-pressure game flow and official crew.",
         "Officiated international youth tournaments (Riga, Gothenburg), establishing authority and clear communication in foreign-language and high-tension environments.",
-        "Led training sessions for junior officials and translated FIBA rule changes from English to Polish for the local association.",
+        "Analysed and translated complex FIBA regulatory documents from English to Polish for the local sports association. Led onboarding sessions for junior officials.",
       ]
     },
   ];
+
+  export const projectsData: Project[] = [
+    {
+      name: "Civic Wallet Architecture",
+      type: "Academic Project",
+      tags: ["Rust", "Kotlin", "Cryptography", "Zero-Knowledge Proofs"],
+      status: "ongoing",
+      link: "https://github.com/nicolaspurr/civic-wallet",
+      linkLabel: "View GitHub",
+      description: [
+        "Designed mobile app architecture and implemented the cryptographic pipeline to generate Groth16 zk-SNARK proofs for CBDC payments on mobile devices.",
+      ]
+    },
+    {
+      name: "Crypto Learning: Cryptopals Solutions (Rust)",
+      type: "Academic Project",
+      tags: ["Rust", "Cryptography", "Cryptanalysis"],
+      status: "ongoing",
+      link: "https://github.com/nicolaspurr/ryoc-crypto",
+      linkLabel: "View GitHub",
+      description: [
+        "Built a custom cryptographic primitive library and CLI tool in Rust to solve Cryptopals challenges.",
+        "Implemented core cryptographic structures from scratch to analyse vulnerabilities and write functional exploits."
+      ]
+    },
+    {
+      name: "Home Lab: Zero-Trust Network Architecture",
+      type: "Personal Project",
+      tags: ["Network Security", "Mikrotik", "Firewall Configuration"],
+      status: "completed",
+      description: [
+        "Designed and deployed a micro-segmented (VLANs) network architecture on MikroTik hardware.",
+        "Created secure SSH/TLS access paths for remote management of network devices."
+      ]
+    },
+];

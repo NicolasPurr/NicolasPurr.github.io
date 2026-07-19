@@ -3,6 +3,7 @@ import '../styles/global.css';
 import Sidebar from '../components/Sidebar.astro';
 import AcademicCard from '../components/AcademicCard.astro';
 import ExperienceCard from '../components/ExperienceCard.astro';
+import ProjectsCard from '../components/ProjectsCard.astro';
 ---
 
 <html lang="en">
@@ -17,9 +18,15 @@ import ExperienceCard from '../components/ExperienceCard.astro';
     <main class="flex-1 p-6 md:p-12 lg:p-16">
       <div class="grid grid-cols-1 xl:grid-cols-2 gap-12 lg:gap-16">
         
-		<AcademicCard />
+        <AcademicCard />
 
-		<ExperienceCard />
+        <!-- Right Column -->
+        <div class="flex flex-col gap-12">
+          <ExperienceCard />
+          <ProjectsCard />
+        </div>
+
+
 
       </div>
 
