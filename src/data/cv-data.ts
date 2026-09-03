@@ -9,7 +9,7 @@ export const personalInfo: Identity = {
     email: "mikolaj.kot@tuta.com",
     location: "Warsaw",
     highlights: [
-      "Cybersecurity enthusiast",
+      "Crpytography & AppSec",
       "Dual-degree student",
       "Basketball official"
     ]
@@ -30,8 +30,8 @@ export const languages: { name: string; level: number; label: string }[] = [
 
 export const techSkills: TechSkill[] = [
     { name: "Rust", level: "Competent", focus: "Cryptology" },
-    { name: "Python", level: "Advanced", focus: "Security Tooling & Automation" },
     { name: "Bash", level: "Competent", focus: "Scripting" },
+    { name: "Python", level: "Competent", focus: "Security Tooling & Automation" },
     { name: "SQL", level: "Competent", focus: "Optimised database querying" },
     //{ name: "Excel VBA", level: "Expert", focus: "Data manipulation and reporting" },
     //{ name: "JavaScript", level: "Competent", focus: "Web development" },
@@ -71,13 +71,6 @@ export const academicData: Education[] = [
         { name: "Database Systems", score: "5!", curriculumUrl: `${MIMUW_LINK}1000-213bBD&lang=en` },
         { name: "Computer Networks", score: 4.5, curriculumUrl: `${MIMUW_LINK}1000-214bSIK&lang=en` },
       ],
-      /*exchange: {
-        institution: "EFREI",
-        location: "Paris, France",
-        duration: "upcoming",
-        status: "upcoming",
-        mainGrades: [ ]
-      }*/
     },
     {
       uni: "SGH Warsaw School of Economics",
@@ -146,11 +139,10 @@ export const academicData: Education[] = [
       status: "completed",
       description: [
         "Developed Python and VBA scripts to securely download, split, and parse client server files into Excel, enforcing strict format validation rules and building visual dashboards to track real-time project stages under team SLAs.",
-        "Re-engineered core data processing logic to O(n log n), achieving a 99% reduction in processing execution time} and enabling the tool to seamlessly process security data for multinational enterprise clients.",
-        "Collaborated within a globally distributed team to implement SAP security modules (GRC, IAM) and deliver compliance documentation for international business units.",
+        "Re-engineered core data processing logic to O(n log n), achieving a 99% reduction in processing time and enabling the tool to seamlessly process security data for multinational enterprise clients.",
+        "Contributed to SAP security delivery within a globally distributed, multi-cultural team.",
         //"Optimised core algorithmic logic for large-scale data processing tools, reducing execution time by 99% and ensuring scalability.",
         //"Automated team operational workflows via custom scripts (Python) and dynamic progress trackers (Excel), significantly reducing manual overhead.",
-        //"Contributed to SAP security delivery within a globally distributed, multi-cultural team.",
       ],
       skills: ["SAP Security", "Automation", "Python"]
     },
@@ -176,7 +168,7 @@ export const academicData: Education[] = [
       link: "https://github.com/nicolaspurr/civic-wallet",
       linkLabel: "View GitHub",
       description: [
-        "Designed mobile app architecture and implemented the cryptographic pipeline to generate Groth16 zk-SNARK proofs for CBDC payments on mobile devices.",
+        "Engineered ZK circuits and implemented an on-device Groth16 proving pipeline (Mopro/Rust FFI to Kotlin), benchmarking proof generation time and resource overhead for mobile CBDC payments.",
       ]
     },
     {
@@ -187,8 +179,7 @@ export const academicData: Education[] = [
       link: "https://github.com/nicolaspurr/ryoc-crypto",
       linkLabel: "View GitHub",
       description: [
-        "Built a custom cryptographic primitive library and CLI tool in Rust to solve Cryptopals challenges.",
-        "Implemented core cryptographic structures from scratch to analyse vulnerabilities and write functional exploits."
+        "Built a custom cryptography and cryptanalysis toolkit in Rust, implementing ciphers from scratch to execute practical exploits across Cryptopals challenges."
       ]
     },
     {
@@ -197,8 +188,7 @@ export const academicData: Education[] = [
       tags: ["Network Security", "Mikrotik", "Firewall Configuration"],
       status: "completed",
       description: [
-        "Designed and deployed a micro-segmented (VLANs) network architecture on MikroTik hardware.",
-        "Created secure SSH/TLS access paths for remote management of network devices."
+        "Architected and deployed a hardened MikroTik network, isolating traffic via segmented VLANs and firewall rules while restricting remote administration to key-based SSH and TLS."
       ]
     },
 ];

@@ -3,7 +3,7 @@ import BulletPoint from './icons/BulletPointPink.astro';
 import { projectsData } from '../data/cv-data.ts';
 
 ---
-<section class="space-y-8">
+<section id="projects" class="space-y-8">
   <div class="flex items-center gap-4 mb-6">
     <h2 class="text-2xl font-black uppercase tracking-tighter">Projects</h2>
     <div class="h-0.5 flex-1 bg-slate-200"></div>
@@ -55,7 +55,7 @@ import { projectsData } from '../data/cv-data.ts';
         <ul class="mt-3 space-y-2">
           {project.description.map(bullet => (
             <li class="flex gap-3 text-sm text-slate-600 leading-relaxed">
-              <div class="mt-[5px] shrink-0 transition-all duration-300 group-hover:translate-x-1 group-hover:text-pink-600">
+              <div class="mt-1.25 shrink-0 transition-all duration-300 group-hover:translate-x-1 group-hover:text-pink-600">
                 <BulletPoint />
               </div>
               <span>{bullet}</span>
